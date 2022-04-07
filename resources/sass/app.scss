@@ -9,7 +9,7 @@
 }
 
 .fg-container {
-    @apply px-5 lg:px-44;
+    @apply px-3 md:px-5 lg:px-44;
 }
 
 body.financial-genie-site {
@@ -20,7 +20,7 @@ body.financial-genie-site {
 .navbar-wrapper {
     @apply flex flex-col w-full;
     .main-navbar {
-        @apply w-full py-5 bg-secondary fixed top-0 left-0 z-50 shadow-md shadow-secondary/30;
+        @apply w-full py-3 md:py-5 bg-secondary fixed top-0 left-0 z-50 shadow-md shadow-secondary/30;
 
         nav {
             @apply text-light flex justify-between items-center;
@@ -28,13 +28,26 @@ body.financial-genie-site {
             }
 
             .navigation {
+                @apply hidden md:block;
+
+                &.mobile-nav {
+                    @apply flex justify-center items-center h-screen z-[99] w-full absolute bg-primary/90 left-0 top-0;
+                }
+
                 ul {
-                    @apply flex gap-3;
+                    @apply flex flex-col md:flex-row gap-3;
                     li {
                         a {
-                            @apply hover:text-gold;
+                            @applytext-base md:text-sm lg:text-base hover:text-gold;
                         }
                     }
+                }
+            }
+
+            .menu {
+                @apply md:hidden;
+                svg {
+                    @apply h-7 fill-gold animate-pulse cursor-pointer;
                 }
             }
         }
@@ -46,7 +59,7 @@ body.financial-genie-site {
 /***APP ENTRY START***/
 
 main.financial-genie-content {
-    @apply pt-10;
+    @apply pt-6 md:pt-10;
 }
 /***APP ENTRY END***/
 
@@ -143,10 +156,10 @@ main.financial-genie-content {
                 }
 
                 .info {
-                    @apply absolute bottom-0 left-0 w-full z-10 h-1/5 pb-3 flex flex-col justify-between;
+                    @apply absolute bottom-0 left-0 w-full z-10 h-1/3 md:h-1/5 pb-3 flex flex-col justify-between;
 
                     p.title {
-                        @apply text-2xl lg:text-3xl font-semibold;
+                        @apply leading-tight  text-base md:text-2xl lg:text-3xl font-semibold;
                     }
                     .info-group {
                         @apply flex justify-between  items-center;
@@ -179,7 +192,7 @@ main.financial-genie-content {
                 @apply p-2 h-1/3 flex flex-col justify-between;
 
                 p.title {
-                    @apply lg:text-base text-sm leading-[1.5rem];
+                    @apply lg:text-base text-sm leading-tight md:leading-[1.5rem];
                 }
                 .info-group {
                     @apply flex justify-between items-center;
@@ -298,7 +311,7 @@ main.financial-genie-content {
     /***TOP SECTION MARGIN****/
 
     .section-allowance {
-        @apply mt-16;
+        @apply mt-12 md:mt-16;
     }
 
     /***EXCHANGE SECTION END***/
@@ -382,7 +395,7 @@ main.financial-genie-content {
                     }
 
                     p.category {
-                        @apply absolute z-10 bottom-1 left-1  px-1 text-sm  h-max bg-gold text-primary rounded-sm;
+                        @apply absolute z-10 bottom-3 md:bottom-1 left-2 md:left-1  px-1 text-sm  h-max bg-gold text-primary rounded-sm;
                     }
                 }
 

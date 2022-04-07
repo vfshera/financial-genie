@@ -12,9 +12,7 @@
                 Email : info@sheraclassics.co.ke
             </p>
 
-            <div class="socials">
 
-            </div>
         </section>
 
 
