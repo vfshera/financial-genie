@@ -19,6 +19,16 @@
                         <a href="#exchange">Exchange</a>
                     </li>
                     <li>
+                        <a href="#prediction">Predictions</a>
+                    </li>
+                    <li>
+                        <a href="#press">Press Release</a>
+                    </li>
+
+                    <li>
+                        <a href="#learn">Learn</a>
+                    </li>
+                    <li>
                         <a href="#">About</a>
                     </li>
                     <li>

@@ -1722,11 +1722,20 @@ body.financial-genie-site {
   flex-direction: column;
 }
 .navbar-wrapper .main-navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(30 34 45 / var(--tw-bg-opacity));
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: rgb(30 34 45 / 0.3);
+  --tw-shadow: var(--tw-shadow-colored);
 }
 .navbar-wrapper .main-navbar nav {
   display: flex;
@@ -1739,19 +1748,138 @@ body.financial-genie-site {
   display: flex;
   gap: 0.75rem;
 }
+.navbar-wrapper .main-navbar nav .navigation ul li a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 162 12 / var(--tw-text-opacity));
+}
+
 /***NAVBAR END***/
 /***APP ENTRY START***/
+main.financial-genie-content {
+  padding-top: 2.5rem;
+}
+
 /***APP ENTRY END***/
+/***FOOTER PAGE START***/
+.footer {
+  margin-top: 3.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 34 45 / var(--tw-bg-opacity));
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+
+  .footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+.footer footer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+
+  .footer footer {
+    flex-direction: row;
+  }
+}
+.footer footer section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+
+  .footer footer section {
+    width: 33.333333%;
+  }
+
+  .footer footer section {
+    gap: 1rem;
+  }
+}
+.footer footer section .footer-section-title {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.footer footer section.about .footer-section-about {
+  padding-right: 0.75rem;
+  color: rgb(214 214 221 / 0.7);
+}
+.footer footer section.about .footer-section-email {
+  color: rgb(214 214 221 / 0.7);
+}
+.footer footer section.important-links {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+@media (min-width: 768px) {
+
+  .footer footer section.important-links {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+.footer footer section.important-links ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+
+  .footer footer section.important-links ul {
+    display: flex;
+  }
+}
+.footer footer section.important-links ul li a {
+  --tw-text-opacity: 1;
+  color: rgb(255 162 12 / var(--tw-text-opacity));
+}
+.footer footer section.important-links ul li a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.footer footer section.subscribe .cta {
+  padding-right: 0.75rem;
+  color: rgb(214 214 221 / 0.7);
+}
+.footer footer section.subscribe form {
+  display: flex;
+  gap: 0.75rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 162 12 / var(--tw-border-opacity));
+  padding: 0.5rem;
+}
+.footer footer section.subscribe form input {
+  width: 83.333333%;
+  border-radius: 0.25rem;
+}
+.footer footer section.subscribe form button svg {
+  height: 1.5rem;
+  fill: #ffa20c;
+}
+
+/***FOOTER PAGE END***/
 /***WELCOME PAGE START***/
 .welcome-page {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   /***NEWS SECTION START***/
   /***NEWS SECTION END***/
   /***EXCHANGE SECTION START***/
+  /***TOP SECTION MARGIN****/
   /***EXCHANGE SECTION END***/
-  /***PREDICTION SECTION START***/
-  /***PREDICTION SECTION END***/
   /***SMALL CARDS SECTION START***/
   /***SMALL SECTION END***/
   /***BIG CARDS SECTION START***/
@@ -1903,7 +2031,6 @@ body.financial-genie-site {
   margin-right: 0.25rem;
 }
 .welcome-page .exchange-wrapper {
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
 }
@@ -2141,6 +2268,9 @@ body.financial-genie-site {
 .welcome-page .exchange-wrapper section.exchange-news .exchange .info .info-group p.author span {
   margin-right: 0.25rem;
 }
+.welcome-page .section-allowance {
+  margin-top: 4rem;
+}
 .welcome-page header.section-head {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -2165,7 +2295,6 @@ body.financial-genie-site {
   color: rgb(255 162 12 / var(--tw-text-opacity));
 }
 .welcome-page .small-cards-wrapper {
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   /***header.section-head was here***/
@@ -2269,7 +2398,6 @@ body.financial-genie-site {
   margin-right: 0.25rem;
 }
 .welcome-page .big-cards-wrapper {
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   /***header.section-head was here***/
