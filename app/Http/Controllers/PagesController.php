@@ -10,7 +10,6 @@ class PagesController extends Controller
     {
 
         $newsFeed = [
-
             (object) [
                 'title' => "Do you think people are born good singers or can someone learn to be a good singer?",
                 'category' => "Music",
@@ -19,6 +18,12 @@ class PagesController extends Controller
             ],
             (object) [
                 'title' => "How to start investing.",
+                'category' => "Investment",
+                'author' => "Anthony Gregory",
+                'posted' => Carbon::now()->diffForHumans(Carbon::now()->subDays(3)),
+            ],
+            (object) [
+                'title' => "Things to consider while planning for retirement",
                 'category' => "Investment",
                 'author' => "Anthony Gregory",
                 'posted' => Carbon::now()->diffForHumans(Carbon::now()->subDays(3)),

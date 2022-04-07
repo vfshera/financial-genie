@@ -231,6 +231,156 @@ main.financial-genie-content {
     }
 
     /***EXCHANGE SECTION END***/
+
+    /***PREDICTION SECTION START***/
+    .prediction-wrapper {
+        header {
+            p {
+            }
+
+            a {
+            }
+        }
+
+        section.predictions {
+            .prediction {
+                .image {
+                    p.category {
+                    }
+                }
+
+                .info {
+                    p.title {
+                    }
+                    .info-group {
+                        p {
+                            &.author {
+                                span {
+                                }
+                            }
+
+                            &.posted {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***PREDICTION SECTION END***/
+
+    header.section-head {
+        @apply flex justify-between items-center bg-secondary my-5 py-2 px-3;
+        p {
+            @apply text-light uppercase font-semibold;
+        }
+
+        a {
+            @apply text-gold;
+        }
+    }
+
+    /***SMALL CARDS SECTION START***/
+    .small-cards-wrapper {
+        @apply mt-20 flex flex-col;
+
+        /***header.section-head was here***/
+
+        section.small-cards {
+            @apply grid  lg:grid-cols-4 md:grid-rows-2 md:grid-cols-3 grid-cols-1 gap-3 text-light;
+
+            .small-card {
+                @apply bg-secondary rounded overflow-hidden shadow-lg shadow-secondary cursor-pointer;
+
+                .image {
+                    @apply h-2/3 relative overflow-hidden;
+
+                    p.category {
+                        @apply absolute z-10 bottom-1 md:top-3 left-1 md:left-3 px-1 text-sm  h-max bg-gold text-primary rounded-sm;
+                    }
+                }
+
+                .info {
+                    @apply p-2 h-1/3 flex flex-col justify-between;
+
+                    p.title {
+                        @apply lg:text-base text-sm leading-[1.5rem];
+                    }
+                    .info-group {
+                        @apply flex justify-between items-center;
+
+                        p {
+                            @apply text-xs;
+
+                            &.author {
+                                span {
+                                    @apply mr-1;
+                                }
+                            }
+
+                            &.posted {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***SMALL SECTION END***/
+
+    /***BIG CARDS SECTION START***/
+    .big-cards-wrapper {
+        @apply mt-20 flex flex-col;
+
+        /***header.section-head was here***/
+
+        section.big-cards {
+            @apply grid  lg:grid-cols-4 md:grid-rows-2 md:grid-cols-2 grid-cols-1 gap-3 text-light;
+
+            .big-card {
+                @apply bg-secondary rounded overflow-hidden shadow-lg lg:col-span-2 shadow-secondary cursor-pointer;
+
+                .image {
+                    @apply h-[250px] relative overflow-hidden;
+
+                    img {
+                    }
+
+                    p.category {
+                        @apply absolute z-10 bottom-1 left-1  px-1 text-sm  h-max bg-gold text-primary rounded-sm;
+                    }
+                }
+
+                .info {
+                    @apply p-2 h-1/5 flex flex-col justify-between;
+
+                    p.title {
+                        @apply lg:text-base text-sm leading-[1.5rem];
+                    }
+                    .info-group {
+                        @apply flex justify-between items-center;
+
+                        p {
+                            @apply text-xs;
+
+                            &.author {
+                                span {
+                                    @apply mr-1;
+                                }
+                            }
+
+                            &.posted {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***BIG SECTION END***/
 }
 
 /***WELCOME PAGE END***/
