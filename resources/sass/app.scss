@@ -8,10 +8,133 @@
     box-sizing: border-box;
 }
 
-body.financial-genie-site {
-    @apply bg-yellow-600;
+.fg-container {
+    @apply px-44;
 }
 
-main.financial-genie-content {
-    // ENTRY
+body.financial-genie-site {
+    @apply bg-primary;
 }
+
+/***NAVBAR START***/
+.navbar-wrapper {
+    @apply flex flex-col w-full;
+    .main-navbar {
+        @apply w-full py-3 bg-secondary;
+
+        nav {
+            @apply text-light flex justify-between items-center;
+            .brand {
+            }
+
+            .navigation {
+                ul {
+                    @apply flex gap-3;
+                    li {
+                        a {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***NAVBAR END***/
+
+/***APP ENTRY START***/
+
+main.financial-genie-content {
+}
+/***APP ENTRY END***/
+/***WELCOME PAGE START***/
+
+.welcome-page {
+    @apply py-5;
+
+    /***NEWS SECTION START***/
+    section.news {
+        @apply grid grid-cols-4 grid-rows-3 gap-3 text-light;
+        display: grid;
+        grid-template-columns: repeat(4, 280px);
+        grid-template-rows: repeat(3, 300px);
+
+        .feed {
+            @apply bg-secondary rounded overflow-hidden shadow-lg shadow-secondary cursor-pointer;
+
+            &.first-feed {
+                @apply relative col-start-1 col-end-4 row-start-1 row-end-3;
+
+                .image {
+                    @apply absolute top-0 left-0 w-full h-full z-0;
+
+                    img {
+                        @apply h-full;
+                        transition: all 1.2s ease-in-out;
+                    }
+
+                    &:hover {
+                        img {
+                            @apply scale-125;
+                        }
+                    }
+                }
+
+                .info {
+                    @apply absolute bottom-0 left-0 w-full z-10 h-1/5;
+
+                    p.title {
+                        @apply text-3xl font-semibold mb-5;
+                    }
+                    .info-group {
+                        @apply flex justify-between  items-center;
+
+                        p {
+                            @apply text-xs;
+
+                            &.author {
+                                span {
+                                    @apply mr-1;
+                                }
+                            }
+
+                            &.posted {
+                            }
+                        }
+                    }
+                }
+            }
+
+            .image {
+            }
+
+            .info {
+                @apply p-2 h-1/3 flex flex-col justify-between;
+
+                p.title {
+                    @apply leading-[1.5rem];
+                }
+                .info-group {
+                    @apply flex justify-between items-center;
+
+                    p {
+                        @apply text-xs;
+
+                        &.author {
+                            span {
+                                @apply mr-1;
+                            }
+                        }
+
+                        &.posted {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***NEWS SECTION END***/
+}
+
+/***WELCOME PAGE END***/

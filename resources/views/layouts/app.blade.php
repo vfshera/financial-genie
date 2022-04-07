@@ -17,14 +17,14 @@
 
 <body class="financial-genie-site">
 
-
+    <x-navbar />
 
 
     <main class="financial-genie-content">
         {{ $slot }}
     </main>
 
-
+    <x-footer />
     @stack('modals')
 
     @livewireScripts

@@ -1,0 +1,28 @@
+<div class="navbar-wrapper">
+
+
+
+    <div class="main-navbar fg-container">
+        <nav>
+            <div class="brand">Financial Genie</div>
+
+
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#news">News</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
