@@ -17,6 +17,7 @@ module.exports = {
                 primary: "#131722",
                 secondary: "#1e222d",
                 light: "#d6d6dd",
+                gold: "#ffa20c",
             },
         },
     },

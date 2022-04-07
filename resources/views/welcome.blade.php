@@ -8,6 +8,8 @@
                 <div class="feed @if ($key == 0) first-feed @endif">
                     <div class="image">
                         <img src="https://picsum.photos/900/600?random={{ $key + 1 }}" alt="">
+
+                        <p class="category">{{ $feed->category }}</p>
                     </div>
                     <div class="info">
                         <p class="title">{{ $feed->title }}</p>
