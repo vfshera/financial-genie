@@ -16,6 +16,9 @@
                         <a href="#news">News</a>
                     </li>
                     <li>
+                        <a href="#exchange">Exchange</a>
+                    </li>
+                    <li>
                         <a href="#">About</a>
                     </li>
                     <li>

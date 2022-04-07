@@ -66,7 +66,7 @@ main.financial-genie-content {
                     @apply absolute top-0 left-0 w-full h-full z-0;
 
                     img {
-                        @apply h-full;
+                        @apply min-h-full min-w-full;
                         transition: all 1.2s ease-in-out;
                     }
 
@@ -137,6 +137,100 @@ main.financial-genie-content {
     }
 
     /***NEWS SECTION END***/
+
+    /***EXCHANGE SECTION START***/
+    .exchange-wrapper {
+        @apply mt-20 flex flex-col;
+
+        header {
+            @apply flex justify-between items-center bg-secondary my-5 py-2 px-3;
+            p {
+                @apply text-light uppercase font-semibold;
+            }
+
+            a {
+                @apply text-gold;
+            }
+        }
+
+        section.exchange-news {
+            @apply grid  lg:grid-cols-4 md:grid-rows-2 md:grid-cols-3 grid-cols-1 gap-3 text-light;
+
+            .exchange {
+                @apply bg-secondary rounded overflow-hidden shadow-lg shadow-secondary cursor-pointer;
+
+                &.enlarged-exchange {
+                    @apply lg:relative lg:col-span-2;
+
+                    .image {
+                        @apply lg:absolute lg:top-0 lg:left-0 lg:w-full lg:h-full lg:z-0;
+
+                        img {
+                            @apply lg:w-full;
+                        }
+                    }
+
+                    .info {
+                        @apply lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:z-10 lg:h-2/5 lg:pb-3 lg:flex lg:flex-col lg:justify-between;
+
+                        p.title {
+                            @apply lg:text-2xl lg:text-3xl lg:font-semibold;
+                        }
+                        .info-group {
+                            @apply lg:flex lg:justify-between  lg:items-center;
+
+                            p {
+                                @apply lg:text-xs;
+
+                                &.author {
+                                    span {
+                                        @apply lg:mr-1;
+                                    }
+                                }
+
+                                &.posted {
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .image {
+                    @apply h-2/3 relative overflow-hidden;
+
+                    p.category {
+                        @apply absolute z-10 bottom-1 md:top-3 left-1 md:left-3 px-1 text-sm  h-max bg-gold text-primary rounded-sm;
+                    }
+                }
+
+                .info {
+                    @apply p-2 h-1/3 flex flex-col justify-between;
+
+                    p.title {
+                        @apply lg:text-base text-sm leading-[1.5rem];
+                    }
+                    .info-group {
+                        @apply flex justify-between items-center;
+
+                        p {
+                            @apply text-xs;
+
+                            &.author {
+                                span {
+                                    @apply mr-1;
+                                }
+                            }
+
+                            &.posted {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***EXCHANGE SECTION END***/
 }
 
 /***WELCOME PAGE END***/
