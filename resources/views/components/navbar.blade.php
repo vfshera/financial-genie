@@ -1,10 +1,12 @@
-<div class="navbar-wrapper">
+<div class="navbar-wrapper" x-data="{ showMobile: false, showContact: false }">
 
 
 
-    <div class="main-navbar fg-container" x-data="{ showMobile: false }">
+    <div class="main-navbar fg-container">
         <nav>
-            <div class="brand">Financial Genie</div>
+            <div class="brand">
+                <a href="/">Financial Genie</a>
+            </div>
 
 
             <div class="navigation" :class="{'mobile-nav': showMobile}">
@@ -32,7 +34,7 @@
                         <a href="#" @click="showMobile = false">About</a>
                     </li>
                     <li>
-                        <a href="#" @click="showMobile = false">Contact</a>
+                        <a href="#" @click="showContact = true">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -44,5 +46,30 @@
                 </svg>
             </div>
         </nav>
+    </div>
+
+    <div class="contact-wrapper" x-show="showContact">
+
+        <span class="close-contact" @click="showContact = false">&times;</span>
+
+        <div class="contact-us">
+            <h1>Contact us</h1>
+            <form action="">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" placeholder="Enter your name...">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" placeholder="Enter your email...">
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Type your message here..."></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </div>
 </div>

@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .fg-container {
@@ -13,7 +14,7 @@
 }
 
 body.financial-genie-site {
-    @apply bg-primary;
+    @apply bg-gradient-to-br from-primary via-secondary to-primary;
 }
 
 /***NAVBAR START***/
@@ -48,6 +49,40 @@ body.financial-genie-site {
                 @apply md:hidden;
                 svg {
                     @apply h-7 fill-gold animate-pulse cursor-pointer;
+                }
+            }
+        }
+    }
+
+    .contact-wrapper {
+        @apply fixed z-[10000]  w-full min-h-screen bg-secondary/95  flex flex-col justify-center items-center;
+
+        .close-contact {
+            @apply cursor-pointer absolute right-36 top-20 text-gold text-6xl;
+        }
+        .contact-us {
+            @apply flex flex-col gap-3 w-2/5;
+
+            h1 {
+                @apply text-gold font-bold text-4xl;
+            }
+
+            form {
+                .input-group {
+                    @apply flex flex-col gap-2 mb-3;
+
+                    label {
+                        @apply text-light font-bold;
+                    }
+
+                    input,
+                    textarea {
+                        @apply bg-secondary rounded-sm text-light;
+                    }
+                }
+
+                button {
+                    @apply bg-gold px-6 py-2 rounded-sm text-secondary font-semibold;
                 }
             }
         }
@@ -92,7 +127,7 @@ main.financial-genie-content {
             &.important-links {
                 @apply my-7 md:my-0;
                 ul {
-                    @apply grid grid-cols-2 gap-3 md:flex;
+                    @apply grid grid-cols-2 gap-3;
                     li {
                         a {
                             @apply text-gold hover:text-white;

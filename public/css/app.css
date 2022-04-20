@@ -1695,6 +1695,7 @@ select {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .fg-container {
@@ -1719,8 +1720,11 @@ select {
 }
 
 body.financial-genie-site {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 23 34 / var(--tw-bg-opacity));
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #131722;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(19 23 34 / 0));
+  --tw-gradient-stops: var(--tw-gradient-from), #1e222d, var(--tw-gradient-to, rgb(30 34 45 / 0));
+  --tw-gradient-to: #131722;
 }
 
 /***NAVBAR START***/
@@ -1821,6 +1825,70 @@ body.financial-genie-site {
   cursor: pointer;
   fill: #ffa20c;
 }
+.navbar-wrapper .contact-wrapper {
+  position: fixed;
+  z-index: 10000;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(30 34 45 / 0.95);
+}
+.navbar-wrapper .contact-wrapper .close-contact {
+  position: absolute;
+  right: 9rem;
+  top: 5rem;
+  cursor: pointer;
+  font-size: 3.75rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(255 162 12 / var(--tw-text-opacity));
+}
+.navbar-wrapper .contact-wrapper .contact-us {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.navbar-wrapper .contact-wrapper .contact-us h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 162 12 / var(--tw-text-opacity));
+}
+.navbar-wrapper .contact-wrapper .contact-us form .input-group {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.navbar-wrapper .contact-wrapper .contact-us form .input-group label {
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(214 214 221 / var(--tw-text-opacity));
+}
+.navbar-wrapper .contact-wrapper .contact-us form .input-group input, .navbar-wrapper .contact-wrapper .contact-us form .input-group textarea {
+  border-radius: 0.125rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 34 45 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(214 214 221 / var(--tw-text-opacity));
+}
+.navbar-wrapper .contact-wrapper .contact-us form button {
+  border-radius: 0.125rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 162 12 / var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(30 34 45 / var(--tw-text-opacity));
+}
 
 /***NAVBAR END***/
 /***APP ENTRY START***/
@@ -1908,12 +1976,6 @@ main.financial-genie-content {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
-}
-@media (min-width: 768px) {
-
-  .footer footer section.important-links ul {
-    display: flex;
-  }
 }
 .footer footer section.important-links ul li a {
   --tw-text-opacity: 1;
