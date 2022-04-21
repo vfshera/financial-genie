@@ -14,7 +14,7 @@
 }
 
 body.financial-genie-site {
-    @apply bg-gradient-to-br from-primary via-secondary to-primary;
+    @apply bg-primary;
 }
 
 /***NAVBAR START***/
@@ -26,6 +26,7 @@ body.financial-genie-site {
         nav {
             @apply text-light flex justify-between items-center;
             .brand {
+                @apply text-gold;
             }
 
             .navigation {
@@ -216,7 +217,7 @@ main.financial-genie-content {
             }
 
             .image {
-                @apply relative;
+                @apply relative bg-light min-h-[180px];
 
                 p.category {
                     @apply absolute z-10 top-3 left-3 px-1 text-sm  bg-gold text-primary rounded-sm;
@@ -309,7 +310,7 @@ main.financial-genie-content {
                 }
 
                 .image {
-                    @apply h-2/3 relative overflow-hidden;
+                    @apply min-h-[180px] relative overflow-hidden bg-light;
 
                     p.category {
                         @apply absolute z-10 bottom-1 md:top-3 left-1 md:left-3 px-1 text-sm  h-max bg-gold text-primary rounded-sm;
@@ -375,7 +376,7 @@ main.financial-genie-content {
                 @apply bg-secondary rounded overflow-hidden shadow-lg shadow-secondary cursor-pointer;
 
                 .image {
-                    @apply h-2/3 relative overflow-hidden;
+                    @apply min-h-[180px] relative overflow-hidden bg-light;
 
                     p.category {
                         @apply absolute z-10 bottom-1 md:top-3 left-1 md:left-3 px-1 text-sm  h-max bg-gold text-primary rounded-sm;
@@ -424,7 +425,7 @@ main.financial-genie-content {
                 @apply bg-secondary rounded overflow-hidden shadow-lg lg:col-span-2 shadow-secondary cursor-pointer;
 
                 .image {
-                    @apply h-[250px] relative overflow-hidden;
+                    @apply h-[250px] relative overflow-hidden bg-light;
 
                     img {
                     }
