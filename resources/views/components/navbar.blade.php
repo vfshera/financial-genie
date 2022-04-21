@@ -24,7 +24,7 @@
                         <a href="#prediction" @click="showMobile = false">Predictions</a>
                     </li>
                     <li>
-                        <a href="#press" @click="showMobile = false">Press Release</a>
+                        <a href="#press-release" @click="showMobile = false">Press Release</a>
                     </li>
 
                     <li>
@@ -48,7 +48,7 @@
         </nav>
     </div>
 
-    <div class="contact-wrapper" x-show="showContact">
+    <div class="contact-wrapper" x-show="showContact" x-cloak>
 
         <span class="close-contact" @click="showContact = false">&times;</span>
 
