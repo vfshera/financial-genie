@@ -17,6 +17,28 @@ body.financial-genie-site {
     @apply bg-primary;
 }
 
+/*** ADMIN ***/
+.admin-dashboard {
+    @apply flex flex-col bg-[#f1f1f1];
+
+    header.admin-head {
+        @apply min-h-[70px] bg-white;
+    }
+
+    section.dashboard {
+        @apply relative flex gap-4 p-4 h-[calc(100vh-90px)];
+
+        aside.admin-sidebar {
+            @apply bg-white rounded-lg w-2/12;
+        }
+
+        main.dashboard-view {
+            @apply bg-white rounded-lg w-10/12;
+        }
+    }
+}
+/*** ADMIN END***/
+
 /***NAVBAR START***/
 .navbar-wrapper {
     @apply flex flex-col w-full;
@@ -217,7 +239,7 @@ main.financial-genie-content {
             }
 
             .image {
-                @apply relative bg-light min-h-[180px];
+                @apply relative bg-light lg:min-h-[180px];
 
                 p.category {
                     @apply absolute z-10 top-3 left-3 px-1 text-sm  bg-gold text-primary rounded-sm;
@@ -252,105 +274,11 @@ main.financial-genie-content {
 
     /***NEWS SECTION END***/
 
-    /***EXCHANGE SECTION START***/
-    .exchange-wrapper {
-        @apply flex flex-col;
-
-        header {
-            @apply flex justify-between items-center bg-secondary my-5 py-2 px-3;
-            p {
-                @apply text-light uppercase font-semibold;
-            }
-
-            a {
-                @apply text-gold;
-            }
-        }
-
-        section.exchange-news {
-            @apply grid  lg:grid-cols-4 md:grid-rows-2 md:grid-cols-3 grid-cols-1 gap-3 text-light;
-
-            .exchange {
-                @apply bg-secondary rounded overflow-hidden shadow-lg shadow-secondary cursor-pointer;
-
-                &.enlarged-exchange {
-                    @apply lg:relative lg:col-span-2;
-
-                    .image {
-                        @apply lg:absolute lg:top-0 lg:left-0 lg:w-full lg:h-full lg:z-0;
-
-                        img {
-                            @apply lg:w-full;
-                        }
-                    }
-
-                    .info {
-                        @apply lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:z-10 lg:h-2/5 lg:pb-3 lg:flex lg:flex-col lg:justify-between;
-
-                        p.title {
-                            @apply lg:text-2xl lg:text-3xl lg:font-semibold;
-                        }
-                        .info-group {
-                            @apply lg:flex lg:justify-between  lg:items-center;
-
-                            p {
-                                @apply lg:text-xs;
-
-                                &.author {
-                                    span {
-                                        @apply lg:mr-1;
-                                    }
-                                }
-
-                                &.posted {
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .image {
-                    @apply min-h-[180px] relative overflow-hidden bg-light;
-
-                    p.category {
-                        @apply absolute z-10 bottom-1 md:top-3 left-1 md:left-3 px-1 text-sm  h-max bg-gold text-primary rounded-sm;
-                    }
-                }
-
-                .info {
-                    @apply p-2 h-1/3 flex flex-col justify-between;
-
-                    p.title {
-                        @apply lg:text-base text-sm leading-[1.5rem];
-                    }
-                    .info-group {
-                        @apply flex justify-between items-center;
-
-                        p {
-                            @apply text-xs;
-
-                            &.author {
-                                span {
-                                    @apply mr-1;
-                                }
-                            }
-
-                            &.posted {
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     /***TOP SECTION MARGIN****/
 
     .section-allowance {
         @apply mt-12 md:mt-16;
     }
-
-    /***EXCHANGE SECTION END***/
 
     header.section-head {
         @apply flex justify-between items-center bg-secondary my-5 py-2 px-3;
@@ -376,7 +304,7 @@ main.financial-genie-content {
                 @apply bg-secondary rounded overflow-hidden shadow-lg shadow-secondary cursor-pointer;
 
                 .image {
-                    @apply min-h-[180px] relative overflow-hidden bg-light;
+                    @apply lg:min-h-[180px] relative overflow-hidden bg-light;
 
                     p.category {
                         @apply absolute z-10 bottom-1 md:top-3 left-1 md:left-3 px-1 text-sm  h-max bg-gold text-primary rounded-sm;
@@ -431,7 +359,7 @@ main.financial-genie-content {
                     }
 
                     p.category {
-                        @apply absolute z-10 bottom-3 md:bottom-1 left-2 md:left-1  px-1 text-sm  h-max bg-gold text-primary rounded-sm;
+                        @apply absolute z-10 bottom-3  left-2 md:left-3   px-1 text-sm  h-max bg-gold text-primary rounded-sm;
                     }
                 }
 
@@ -463,6 +391,93 @@ main.financial-genie-content {
     }
 
     /***BIG SECTION END***/
+    /***HALF BIG CARDS SECTION START***/
+    .half-big-cards-wrapper {
+        @apply flex flex-col;
+
+        /***header.section-head was here***/
+
+        section.half-big-cards {
+            @apply grid  lg:grid-cols-4 md:grid-rows-2 md:grid-cols-3 grid-cols-1 gap-3 text-light;
+
+            .half-big-card {
+                @apply bg-secondary rounded overflow-hidden shadow-lg shadow-secondary cursor-pointer;
+
+                &.enlarged-card {
+                    @apply lg:relative lg:col-span-2;
+
+                    .image {
+                        @apply h-[250px] relative overflow-hidden bg-light;
+
+                        img {
+                        }
+
+                        p.category {
+                            @apply absolute z-10 bottom-3  left-2 md:left-3   px-1 text-sm  h-max bg-gold text-primary rounded-sm;
+                        }
+                    }
+
+                    .info {
+                        @apply p-2 h-1/5 flex flex-col justify-between;
+
+                        p.title {
+                            @apply lg:text-base text-sm leading-[1.5rem];
+                        }
+                        .info-group {
+                            @apply flex justify-between items-center;
+
+                            p {
+                                @apply text-xs;
+
+                                &.author {
+                                    span {
+                                        @apply mr-1;
+                                    }
+                                }
+
+                                &.posted {
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .image {
+                    @apply lg:min-h-[180px] relative overflow-hidden bg-light;
+
+                    p.category {
+                        @apply absolute z-10 bottom-1 md:top-3 left-1 md:left-3 px-1 text-sm  h-max bg-gold text-primary rounded-sm;
+                    }
+                }
+
+                .info {
+                    @apply p-2 h-1/3 flex flex-col justify-between;
+
+                    p.title {
+                        @apply lg:text-base text-sm leading-[1.5rem];
+                    }
+                    .info-group {
+                        @apply flex justify-between items-center;
+
+                        p {
+                            @apply text-xs;
+
+                            &.author {
+                                span {
+                                    @apply mr-1;
+                                }
+                            }
+
+                            &.posted {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***HALF BIG SECTION END***/
 }
 
 /***WELCOME PAGE END***/
