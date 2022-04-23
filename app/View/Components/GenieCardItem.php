@@ -4,28 +4,24 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class GenieCards extends Component
+class GenieCardItem extends Component
 {
-    public $feeds;
-    public $cardType;
+    public $card;
+    public $enlarged;
     public $section;
-    public $title;
-    public $limit;
     public $types = ['SMALL' => 'small-card', 'BIG' => 'big-card', 'TOP_HALF_BIG' => 'half-big-card'];
-
+    public $cardType;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($feeds = [], $cardType = "SMALL", $section = "", $title = "", $limit = 8)
+    public function __construct($card, $enlarged = false, $type = 'SMALL', $section)
     {
-        $this->feeds = $feeds;
-        $this->cardType = $cardType;
+        $this->card = $card;
         $this->section = $section;
-        $this->title = $title;
-        $this->limit = $limit;
-
+        $this->enlarged = $enlarged;
+        $this->cardType = $this->types[$type];
     }
 
     /**
@@ -35,6 +31,6 @@ class GenieCards extends Component
      */
     public function render()
     {
-        return view('components.genie-cards');
+        return view('components.genie-card-item');
     }
 }

@@ -1744,6 +1744,10 @@ select {
   scroll-behavior: smooth;
 }
 
+[x-cloak] {
+  display: none !important;
+}
+
 .fg-container {
   padding-left: 0.75rem;
   padding-right: 0.75rem;

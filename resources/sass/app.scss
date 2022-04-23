@@ -8,7 +8,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+[x-cloak] {
+    display: none !important;
+}
 .fg-container {
     @apply px-3 md:px-5 lg:px-44;
 }
