@@ -8,10 +8,12 @@
         @foreach ($feeds as $key => $feed)
             @php
                 $isEnlarged = $key < 2 && $cardType == 'TOP_HALF_BIG';
+                
             @endphp
 
             @if ($key < $limit)
-                <x-genie-card-item :card="$feed" :enlarged="$isEnlarged" :section="$section" :type="$cardType" />
+                <x-genie-card-item :card="$feed" :enlarged="$isEnlarged" :section="$section" :type="$cardType"
+                    :index="$key" />
             @endif
         @endforeach
     </section>

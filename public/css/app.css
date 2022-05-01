@@ -953,9 +953,6 @@ select {
 .right-0 {
   right: 0px;
 }
-.top-0 {
-  top: 0px;
-}
 .z-0 {
   z-index: 0;
 }
@@ -1037,9 +1034,6 @@ select {
 }
 .mb-4 {
   margin-bottom: 1rem;
-}
-.-mt-px {
-  margin-top: -1px;
 }
 .block {
   display: block;
@@ -1142,9 +1136,6 @@ select {
 }
 .max-w-xl {
   max-width: 36rem;
-}
-.max-w-6xl {
-  max-width: 72rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1305,9 +1296,6 @@ select {
 .border-b {
   border-bottom-width: 1px;
 }
-.border-r {
-  border-right-width: 1px;
-}
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1326,10 +1314,6 @@ select {
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
-}
-.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1495,9 +1479,6 @@ select {
 .pb-1 {
   padding-bottom: 0.25rem;
 }
-.pt-8 {
-  padding-top: 2rem;
-}
 .text-left {
   text-align: left;
 }
@@ -1560,9 +1541,6 @@ select {
 }
 .tracking-widest {
   letter-spacing: 0.1em;
-}
-.tracking-wider {
-  letter-spacing: 0.05em;
 }
 .text-gray-500 {
   --tw-text-opacity: 1;
@@ -1635,10 +1613,6 @@ select {
 .text-light {
   --tw-text-opacity: 1;
   color: rgb(214 214 221 / var(--tw-text-opacity));
-}
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -2100,6 +2074,7 @@ main.financial-genie-content {
   /***NEWS SECTION END***/
   /***TOP SECTION MARGIN****/
   /***SMALL CARDS SECTION START***/
+  /***small-card was here***/
   /***SMALL SECTION END***/
   /***BIG CARDS SECTION START***/
   /***BIG SECTION END***/
@@ -2119,18 +2094,6 @@ main.financial-genie-content {
   .welcome-page section.news {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-}
-.welcome-page section.news .feed {
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 0.25rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 34 45 / var(--tw-bg-opacity));
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: #1e222d;
-  --tw-shadow: var(--tw-shadow-colored);
 }
 .welcome-page section.news .feed.first-feed {
   position: relative;
@@ -2217,69 +2180,6 @@ main.financial-genie-content {
 .welcome-page section.news .feed.first-feed .info .info-group p.author span {
   margin-right: 0.25rem;
 }
-.welcome-page section.news .feed .image {
-  position: relative;
-  --tw-bg-opacity: 1;
-  background-color: rgb(214 214 221 / var(--tw-bg-opacity));
-}
-@media (min-width: 1024px) {
-
-  .welcome-page section.news .feed .image {
-    min-height: 180px;
-  }
-}
-.welcome-page section.news .feed .image p.category {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  z-index: 10;
-  border-radius: 0.125rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 162 12 / var(--tw-bg-opacity));
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(19 23 34 / var(--tw-text-opacity));
-}
-.welcome-page section.news .feed .info {
-  display: flex;
-  height: 33.333333%;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.5rem;
-}
-.welcome-page section.news .feed .info p.title {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  line-height: 1.25;
-}
-@media (min-width: 768px) {
-
-  .welcome-page section.news .feed .info p.title {
-    line-height: 1.5rem;
-  }
-}
-@media (min-width: 1024px) {
-
-  .welcome-page section.news .feed .info p.title {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-.welcome-page section.news .feed .info .info-group {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.welcome-page section.news .feed .info .info-group p {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-.welcome-page section.news .feed .info .info-group p.author span {
-  margin-right: 0.25rem;
-}
 .welcome-page .section-allowance {
   margin-top: 3rem;
 }
@@ -2340,7 +2240,7 @@ main.financial-genie-content {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
-.welcome-page .small-cards-wrapper section.small-cards .small-card {
+.welcome-page .small-card {
   cursor: pointer;
   overflow: hidden;
   border-radius: 0.25rem;
@@ -2352,7 +2252,7 @@ main.financial-genie-content {
   --tw-shadow-color: #1e222d;
   --tw-shadow: var(--tw-shadow-colored);
 }
-.welcome-page .small-cards-wrapper section.small-cards .small-card .image {
+.welcome-page .small-card .image {
   position: relative;
   overflow: hidden;
   --tw-bg-opacity: 1;
@@ -2360,11 +2260,11 @@ main.financial-genie-content {
 }
 @media (min-width: 1024px) {
 
-  .welcome-page .small-cards-wrapper section.small-cards .small-card .image {
+  .welcome-page .small-card .image {
     min-height: 180px;
   }
 }
-.welcome-page .small-cards-wrapper section.small-cards .small-card .image p.category {
+.welcome-page .small-card .image p.category {
   position: absolute;
   bottom: 0.25rem;
   left: 0.25rem;
@@ -2384,48 +2284,49 @@ main.financial-genie-content {
 }
 @media (min-width: 768px) {
 
-  .welcome-page .small-cards-wrapper section.small-cards .small-card .image p.category {
+  .welcome-page .small-card .image p.category {
     top: 0.75rem;
   }
 
-  .welcome-page .small-cards-wrapper section.small-cards .small-card .image p.category {
+  .welcome-page .small-card .image p.category {
     left: 0.75rem;
   }
 }
-.welcome-page .small-cards-wrapper section.small-cards .small-card .info {
+.welcome-page .small-card .info {
   display: flex;
   height: 33.333333%;
   flex-direction: column;
   justify-content: space-between;
   padding: 0.5rem;
 }
-.welcome-page .small-cards-wrapper section.small-cards .small-card .info p.title {
+.welcome-page .small-card .info p.title {
   font-size: 0.875rem;
   line-height: 1.5rem;
 }
 @media (min-width: 1024px) {
 
-  .welcome-page .small-cards-wrapper section.small-cards .small-card .info p.title {
+  .welcome-page .small-card .info p.title {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
-.welcome-page .small-cards-wrapper section.small-cards .small-card .info .info-group {
+.welcome-page .small-card .info .info-group {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.welcome-page .small-cards-wrapper section.small-cards .small-card .info .info-group p {
+.welcome-page .small-card .info .info-group p {
   font-size: 0.75rem;
   line-height: 1rem;
 }
-.welcome-page .small-cards-wrapper section.small-cards .small-card .info .info-group p.author span {
+.welcome-page .small-card .info .info-group p.author span {
   margin-right: 0.25rem;
 }
 .welcome-page .big-cards-wrapper {
   display: flex;
   flex-direction: column;
   /***header.section-head was here***/
+  /***big-card was here***/
 }
 .welcome-page .big-cards-wrapper section.big-cards {
   display: grid;
@@ -2450,7 +2351,7 @@ main.financial-genie-content {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
-.welcome-page .big-cards-wrapper section.big-cards .big-card {
+.welcome-page .big-card {
   cursor: pointer;
   overflow: hidden;
   border-radius: 0.25rem;
@@ -2464,18 +2365,18 @@ main.financial-genie-content {
 }
 @media (min-width: 1024px) {
 
-  .welcome-page .big-cards-wrapper section.big-cards .big-card {
+  .welcome-page .big-card {
     grid-column: span 2 / span 2;
   }
 }
-.welcome-page .big-cards-wrapper section.big-cards .big-card .image {
+.welcome-page .big-card .image {
   position: relative;
   height: 250px;
   overflow: hidden;
   --tw-bg-opacity: 1;
   background-color: rgb(214 214 221 / var(--tw-bg-opacity));
 }
-.welcome-page .big-cards-wrapper section.big-cards .big-card .image p.category {
+.welcome-page .big-card .image p.category {
   position: absolute;
   bottom: 0.75rem;
   left: 0.5rem;
@@ -2495,38 +2396,38 @@ main.financial-genie-content {
 }
 @media (min-width: 768px) {
 
-  .welcome-page .big-cards-wrapper section.big-cards .big-card .image p.category {
+  .welcome-page .big-card .image p.category {
     left: 0.75rem;
   }
 }
-.welcome-page .big-cards-wrapper section.big-cards .big-card .info {
+.welcome-page .big-card .info {
   display: flex;
   height: 20%;
   flex-direction: column;
   justify-content: space-between;
   padding: 0.5rem;
 }
-.welcome-page .big-cards-wrapper section.big-cards .big-card .info p.title {
+.welcome-page .big-card .info p.title {
   font-size: 0.875rem;
   line-height: 1.5rem;
 }
 @media (min-width: 1024px) {
 
-  .welcome-page .big-cards-wrapper section.big-cards .big-card .info p.title {
+  .welcome-page .big-card .info p.title {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
-.welcome-page .big-cards-wrapper section.big-cards .big-card .info .info-group {
+.welcome-page .big-card .info .info-group {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.welcome-page .big-cards-wrapper section.big-cards .big-card .info .info-group p {
+.welcome-page .big-card .info .info-group p {
   font-size: 0.75rem;
   line-height: 1rem;
 }
-.welcome-page .big-cards-wrapper section.big-cards .big-card .info .info-group p.author span {
+.welcome-page .big-card .info .info-group p.author span {
   margin-right: 0.25rem;
 }
 .welcome-page .half-big-cards-wrapper {
@@ -2885,13 +2786,6 @@ main.financial-genie-content {
 .disabled\:opacity-25:disabled {
   opacity: 0.25;
 }
-@media (prefers-color-scheme: dark) {
-
-  .dark\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
-}
 @media (min-width: 640px) {
 
   .sm\:col-span-4 {
@@ -3008,10 +2902,6 @@ main.financial-genie-content {
 
   .sm\:items-center {
     align-items: center;
-  }
-
-  .sm\:justify-start {
-    justify-content: flex-start;
   }
 
   .sm\:justify-center {
