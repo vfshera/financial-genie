@@ -1602,6 +1602,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
+.text-\[\#01aef4\] {
+  --tw-text-opacity: 1;
+  color: rgb(1 174 244 / var(--tw-text-opacity));
+}
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
@@ -1750,32 +1754,96 @@ body.financial-genie-site {
 
 /*** ADMIN ***/
 .admin-dashboard {
+  --nav-height: 60px;
+  --content-height: calc(100vh - var(--nav-height));
+  --highlight-color: #01aef4;
   display: flex;
   flex-direction: column;
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
 .admin-dashboard header.admin-head {
-  min-height: 70px;
+  display: flex;
+  min-height: var(--nav-height);
+  align-items: center;
+  border-bottom-width: 1px;
+  border-color: rgb(30 34 45 / 0.1);
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.admin-dashboard header.admin-head .admin-head-brand {
+  width: 16.666667%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-weight: 700;
+}
+.admin-dashboard header.admin-head .admin-head-nav {
+  height: 100%;
+  width: 83.333333%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 162 12 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-weight: 700;
 }
 .admin-dashboard section.dashboard {
   position: relative;
   display: flex;
-  height: calc(100vh - 90px);
-  gap: 1rem;
-  padding: 1rem;
+  height: var(--content-height);
 }
-.admin-dashboard section.dashboard aside.admin-sidebar {
+.admin-dashboard section.dashboard aside.dashboard-sidebar {
+  display: flex;
   width: 16.666667%;
-  border-radius: 0.5rem;
+  flex-direction: column;
+  border-right-width: 1px;
+  border-color: rgb(30 34 45 / 0.1);
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.admin-dashboard section.dashboard aside.dashboard-sidebar section.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-right: 1.25rem;
+}
+.admin-dashboard section.dashboard aside.dashboard-sidebar section.links .sidebar-link {
+  cursor: pointer;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+  padding-left: 1.25rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.admin-dashboard section.dashboard aside.dashboard-sidebar section.links .sidebar-link.active {
+  background-color: rgb(1 174 244 / 0.1);
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(1 174 244 / var(--tw-text-opacity));
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.admin-dashboard section.dashboard aside.dashboard-sidebar section.links .sidebar-link a {
+  display: flex;
+  gap: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+.admin-dashboard section.dashboard aside.dashboard-sidebar .copyright {
+  margin-top: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(30 34 45 / var(--tw-text-opacity));
 }
 .admin-dashboard section.dashboard main.dashboard-view {
   width: 83.333333%;
-  border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
