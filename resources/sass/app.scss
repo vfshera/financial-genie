@@ -20,22 +20,55 @@ body.financial-genie-site {
 }
 
 /*** ADMIN ***/
+
 .admin-dashboard {
+    --nav-height: 60px;
+    --content-height: calc(100vh - var(--nav-height));
+    --highlight-color: #01aef4;
+
     @apply flex flex-col bg-[#f1f1f1];
 
     header.admin-head {
-        @apply min-h-[70px] bg-white;
+        @apply flex items-center min-h-[var(--nav-height)] border-b border-secondary/10 bg-white;
+
+        .admin-head-brand {
+            @apply font-bold w-2/12 px-5;
+        }
+        .admin-head-nav {
+            @apply font-bold w-10/12 h-full bg-gold px-5;
+        }
     }
 
     section.dashboard {
-        @apply relative flex gap-4 p-4 h-[calc(100vh-90px)];
+        @apply relative flex h-[var(--content-height)];
 
-        aside.admin-sidebar {
-            @apply bg-white rounded-lg w-2/12;
+        aside.dashboard-sidebar {
+            @apply bg-white py-5 border-r flex flex-col border-secondary/10 w-2/12;
+
+            section.links {
+                @apply flex flex-col gap-3 pr-5;
+                .sidebar-link {
+                    @apply p-2 pl-5 bg-gray-50  cursor-pointer rounded-r transition-all;
+
+                    &.active {
+                        @apply bg-cool/10 text-cool shadow-sm font-semibold;
+                    }
+                    a {
+                        @apply flex gap-2 text-gray-600;
+
+                        .icon {
+                        }
+                    }
+                }
+            }
+
+            .copyright {
+                @apply px-5 mt-auto text-secondary;
+            }
         }
 
         main.dashboard-view {
-            @apply bg-white rounded-lg w-10/12;
+            @apply bg-white  w-10/12;
         }
     }
 }

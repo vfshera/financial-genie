@@ -20,17 +20,51 @@
     <div class="admin-dashboard">
 
         <header class="admin-head">
+            <div class="admin-head-brand">
+                <span class="text-[#01aef4]">FG</span>/<span class="text-gray-500">Admin</span>
+            </div>
 
+            <div class="admin-head-nav">
+                Nav
+            </div>
         </header>
         <section class="dashboard">
 
-            <aside class="admin-sidebar">
-                aaa
+            <aside class="dashboard-sidebar">
+
+                <section class="links">
+
+                    @php
+                        $ac = true;
+                    @endphp
+                    <x-admin.sidebar-link :active="$ac">
+                        Say Something
+                    </x-admin.sidebar-link>
+                    <x-admin.sidebar-link>
+                        <x-slot name="icon">
+                            a
+                        </x-slot>
+                        Say Something
+                    </x-admin.sidebar-link>
+                    <x-admin.sidebar-link>
+                        <x-slot name="icon">
+                            b
+                        </x-slot>
+                        Say Something
+                    </x-admin.sidebar-link>
+                </section>
+
+
+
+
+
+                <div class="copyright">&copy; Financial Genie {{ date('Y') }}</div>
+
             </aside>
 
 
             <main class="dashboard-view">
-                gdgd
+
                 {{ $slot }}
             </main>
         </section>
