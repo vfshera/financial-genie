@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'FG') }}</title>
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
@@ -21,7 +21,7 @@
 
         <header class="admin-head">
             <div class="admin-head-brand">
-                <span class="text-[#01aef4]">FG</span>/<span class="text-gray-500">Admin</span>
+                <span class="text-[#01aef4]">FG</span><span class="text-gray-500">Admin</span>
             </div>
 
             <div class="admin-head-nav">
@@ -35,17 +35,18 @@
                 <section class="links">
 
                     @php
-                        $ac = true;
+                        $postLinks = [['name' => 'Compose', 'path' => 'admin.posts.compose'], ['name' => 'My Posts', 'path' => 'admin.dashboard']];
                     @endphp
-                    <x-admin.sidebar-link :active="$ac">
-                        Say Something
+                    <x-admin.sidebar-link :active="request()->routeIs('admin.dashboard')" :link="route('admin.dashboard')">
+                        Dashboard
                     </x-admin.sidebar-link>
-                    <x-admin.sidebar-link>
-                        <x-slot name="icon">
-                            a
-                        </x-slot>
-                        Say Something
-                    </x-admin.sidebar-link>
+
+
+
+
+                    <x-admin.sidebar-link-group title="Posts" :links="$postLinks" :open-if="request()->routeIs('admin.posts.*')" />
+
+
                     <x-admin.sidebar-link>
                         <x-slot name="icon">
                             b
@@ -64,7 +65,6 @@
 
 
             <main class="dashboard-view">
-
                 {{ $slot }}
             </main>
         </section>
@@ -72,6 +72,7 @@
 
 
     @stack('modals')
+    @stack('scripts')
 
     @livewireScripts
 
