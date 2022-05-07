@@ -51,12 +51,39 @@ body.financial-genie-site {
                     @apply p-2 pl-5 bg-gray-50  cursor-pointer rounded-r transition-all;
 
                     &.active {
-                        @apply bg-cool/10 text-cool shadow-sm font-semibold;
+                        @apply bg-cool/10  shadow-sm font-semibold;
+
+                        a {
+                            @apply text-cool;
+                        }
                     }
                     a {
                         @apply flex gap-2 text-gray-600;
 
                         .icon {
+                        }
+                    }
+                }
+
+                .sidebar-link-group {
+                    @apply py-2 px-5 bg-gray-50;
+
+                    p.group-title {
+                        @apply font-bold cursor-pointer text-gray-600;
+
+                        span.group-icon {
+                            @apply text-cool;
+                        }
+                    }
+
+                    .group-links {
+                        @apply flex flex-col gap-2 border-t border-secondary/10 mt-2;
+
+                        .sidebar-link {
+                            @apply pl-2;
+
+                            &.nested-link {
+                            }
                         }
                     }
                 }
@@ -69,6 +96,22 @@ body.financial-genie-site {
 
         main.dashboard-view {
             @apply bg-white  w-10/12;
+
+            /*** DASHBOARD PAGES ***/
+            .compose-page {
+                @apply p-2 h-full overflow-y-scroll;
+
+                h1 {
+                    @apply mb-2 font-bold text-xl;
+                }
+
+                .editor-wrapper {
+                    @apply p-2 min-h-[60vh];
+                    .editor {
+                    }
+                }
+            }
+            /*** DASHBOARD PAGES END ***/
         }
     }
 }
