@@ -1,5 +1,7 @@
-<div {{ $attributes->class(['sidebar-link', 'active' => $isActive]) }}>
-    <a href="#">
+<div {{ $attributes->class(['sidebar-link', 'nested-link' => $isNested, 'active' => $isActive]) }}>
+
+
+    <a href="{{ $link }}">
         <div class="icon">
             @if (isset($icon))
                 {{ $icon }}
