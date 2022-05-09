@@ -14,7 +14,7 @@ class SidebarLink extends Component
      *
      * @return void
      */
-    public function __construct($active = false, $nested = false, $link = 'admin.dashboard')
+    public function __construct($active = false, $nested = false, $link = "#")
     {
         $this->isNested = $nested;
         $this->isActive = $active;

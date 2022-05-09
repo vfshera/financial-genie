@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'FG') }}</title>
+    <title>{{ config('app.name', 'FG') }} - Dashboard @if (isset($pageTitle))
+            | {{ $pageTitle }}
+        @endif
+    </title>
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
@@ -49,7 +52,7 @@
 
                     <x-admin.sidebar-link>
                         <x-slot name="icon">
-                            b
+                            00
                         </x-slot>
                         Say Something
                     </x-admin.sidebar-link>
