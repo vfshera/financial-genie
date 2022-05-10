@@ -1893,9 +1893,10 @@ body.financial-genie-site {
   gap: 0.5rem;
   border-top-width: 1px;
   border-color: rgb(30 34 45 / 0.1);
+  padding-top: 0.5rem;
 }
 .admin-dashboard section.dashboard aside.dashboard-sidebar section.links .sidebar-link-group .group-links .sidebar-link {
-  padding-left: 0.5rem;
+  padding: 0.5rem;
 }
 .admin-dashboard section.dashboard aside.dashboard-sidebar .copyright {
   margin-top: auto;

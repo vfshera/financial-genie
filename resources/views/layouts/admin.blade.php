@@ -45,9 +45,10 @@
                     </x-admin.sidebar-link>
 
 
+                    @livewire('admin.sidebar-link-group', ['title' => "Posts", 'links'=>$postLinks, 'openIf'=>
+                    request()->routeIs('admin.posts.*')])
 
-
-                    <x-admin.sidebar-link-group title="Posts" :links="$postLinks" :open-if="request()->routeIs('admin.posts.*')" />
+                    {{-- <x-admin.sidebar-link-group title="Posts" :links="$postLinks" :open-if="request()->routeIs('admin.posts.*')" /> --}}
 
 
                     <x-admin.sidebar-link>

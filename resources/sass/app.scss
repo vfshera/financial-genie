@@ -77,10 +77,10 @@ body.financial-genie-site {
                     }
 
                     .group-links {
-                        @apply flex flex-col gap-2 border-t border-secondary/10 mt-2;
+                        @apply flex flex-col gap-2 border-t border-secondary/10 mt-2 pt-2;
 
                         .sidebar-link {
-                            @apply pl-2;
+                            @apply p-2;
 
                             &.nested-link {
                             }
