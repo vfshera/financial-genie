@@ -45,11 +45,7 @@
                     </x-admin.sidebar-link>
 
 
-                    @livewire('admin.sidebar-link-group', ['title' => "Posts", 'links'=>$postLinks, 'openIf'=>
-                    request()->routeIs('admin.posts.*')])
-
-                    {{-- <x-admin.sidebar-link-group title="Posts" :links="$postLinks" :open-if="request()->routeIs('admin.posts.*')" /> --}}
-
+                    <livewire:admin.sidebar-link-group title="Posts" :links="$postLinks" :openIf="request()->routeIs('admin.posts.*')" />
 
                     <x-admin.sidebar-link>
                         <x-slot name="icon">
@@ -57,6 +53,8 @@
                         </x-slot>
                         Say Something
                     </x-admin.sidebar-link>
+
+
                 </section>
 
 
