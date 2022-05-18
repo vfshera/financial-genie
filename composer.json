@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "codex-team/editor.js": "dev-master",
+        "deanblackborough/php-quill-renderer": "^4.01",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
