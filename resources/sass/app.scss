@@ -19,6 +19,24 @@ body.financial-genie-site {
     @apply bg-primary;
 }
 
+.input-group {
+    @apply flex flex-col;
+    label {
+    }
+    input {
+        @apply p-1 rounded;
+    }
+}
+
+.hint {
+    @apply flex  items-center;
+    span.name {
+        @apply font-semibold text-sm;
+    }
+
+    p.value {
+    }
+}
 /*** ADMIN ***/
 
 .admin-dashboard {
@@ -100,14 +118,31 @@ body.financial-genie-site {
             /*** DASHBOARD PAGES ***/
             .compose-page {
                 @apply p-2 h-full overflow-y-scroll;
-
-                h1 {
-                    @apply mb-2 font-bold text-xl;
+                .compose-header {
+                    @apply mb-3 flex justify-between items-center;
+                    h1 {
+                        @apply mb-2 font-bold text-xl;
+                    }
+                    button.btn-save-post {
+                        @apply px-5 py-1 bg-white shadow-sm text-gray-500 hover:text-white shadow-cool/20 hover:bg-cool rounded;
+                    }
                 }
 
-                .editor-wrapper {
+                #editor-wrapper {
                     @apply p-2 min-h-[60vh];
+
+                    form#quillForm {
+                        @apply my-3 bg-cool/20 p-5;
+                        .input-group {
+                            label {
+                            }
+
+                            input {
+                            }
+                        }
+                    }
                     .editor {
+                        @apply mt-2 min-h-[40vh];
                     }
                 }
             }

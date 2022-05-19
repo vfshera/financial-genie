@@ -2,16 +2,25 @@
     <x-slot name="pageTitle">Post Compose</x-slot>
 
     <div class="compose-page">
-        <h1>Compose</h1>
-        <button id="editorSave" class="px-3 py-1.5 bg-cool text-white rounded">Save</button>
+        <div class="compose-header">
+            <h1>Compose</h1>
+            <button id="editorSave" class="btn-save-post">Save</button>
+        </div>
 
-        <form id="quillForm" action="{{ route('admin.posts.create') }}" method="POST">
-            <input type="text" name="quillcontent" hidden value="" />
-            @csrf
 
-        </form>
 
         <div id="editor-wrapper">
+            <form id="quillForm" action="{{ route('admin.posts.create') }}" method="POST">
+                <input type="text" name="quillcontent" hidden value="" />
+
+
+                <x-form.input label="Title" type="text" placholder="Enter title here" />
+                <x-form.hint name="slug" hint="the-title-slug-will-appear-here" />
+
+
+                @csrf
+
+            </form>
             <section class="editor" id="editor">
 
             </section>
