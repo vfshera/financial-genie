@@ -14,8 +14,10 @@
                 <input type="text" name="quillcontent" hidden value="" />
 
 
-                <x-form.input label="Title" type="text" placholder="Enter title here" />
-                <x-form.hint name="slug" hint="the-title-slug-will-appear-here" />
+                <div class="hinted">
+                    <x-form.input label="Title" type="text" placeholder="Enter title here..." />
+                    <x-form.hint name="slug" hint="the-title-slug-will-appear-here" />
+                </div>
 
 
                 @csrf

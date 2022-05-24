@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Carbon\Carbon;
 
 class PagesController extends Controller
@@ -60,5 +61,11 @@ class PagesController extends Controller
             ],
         ];
         return view('welcome', compact('newsFeed'));
+    }
+
+    public function singlePost()
+    {
+        $post = Post::first();
+        return view('single-post', compact('post'));
     }
 }

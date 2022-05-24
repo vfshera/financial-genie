@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PagesController::class, 'index']);
+Route::get('/post', [PagesController::class, 'singlePost']);
 
 Route::middleware([
     'auth:sanctum',
@@ -19,5 +20,7 @@ Route::middleware([
         Route::get('/compose', [PostController::class, 'index'])->name('compose');
 
         Route::post('/create', [PostController::class, 'store'])->name('create');
+
+        // Route::post('/post', [PostController::class, 'store'])->name('single-view');
     });
 });

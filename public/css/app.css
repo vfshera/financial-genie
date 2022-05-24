@@ -1746,6 +1746,10 @@ select {
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
+html {
+  height: 100%;
+}
+
 :root {
   margin: 0;
   padding: 0;
@@ -1779,10 +1783,28 @@ select {
 }
 
 body.financial-genie-site {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
   --tw-bg-opacity: 1;
   background-color: rgb(19 23 34 / var(--tw-bg-opacity));
 }
 
+.hinted {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.hinted .hint {
+  display: flex;
+  align-items: center;
+}
+.hinted .hint span.name {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
 .input-group {
   display: flex;
   flex-direction: column;
@@ -1792,15 +1814,6 @@ body.financial-genie-site {
   padding: 0.25rem;
 }
 
-.hint {
-  display: flex;
-  align-items: center;
-}
-.hint span.name {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 600;
-}
 /*** ADMIN ***/
 .admin-dashboard {
   --nav-height: 60px;
@@ -1933,10 +1946,10 @@ body.financial-genie-site {
 .admin-dashboard section.dashboard main.dashboard-view .compose-page {
   height: 100%;
   overflow-y: scroll;
-  padding: 0.5rem;
+  padding: 1.25rem;
 }
 .admin-dashboard section.dashboard main.dashboard-view .compose-page .compose-header {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1971,17 +1984,15 @@ body.financial-genie-site {
 }
 .admin-dashboard section.dashboard main.dashboard-view .compose-page #editor-wrapper {
   min-height: 60vh;
-  padding: 0.5rem;
 }
 .admin-dashboard section.dashboard main.dashboard-view .compose-page #editor-wrapper form#quillForm {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  background-color: rgb(1 174 244 / 0.2);
-  padding: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 .admin-dashboard section.dashboard main.dashboard-view .compose-page #editor-wrapper .editor {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   min-height: 40vh;
+  overflow-x: scroll;
 }
 
 /*** ADMIN END***/
@@ -2167,7 +2178,7 @@ main.financial-genie-content {
 /***APP ENTRY END***/
 /***FOOTER PAGE START***/
 .footer {
-  margin-top: 3.5rem;
+  margin-top: auto;
   --tw-bg-opacity: 1;
   background-color: rgb(30 34 45 / var(--tw-bg-opacity));
   padding-top: 2.5rem;
@@ -2816,6 +2827,32 @@ main.financial-genie-content {
   margin-right: 0.25rem;
 }
 /***WELCOME PAGE END***/
+/***SINGLE POST PAGE***/
+.single-post-page {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 214 221 / var(--tw-bg-opacity));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.single-post-page .single-post {
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1.75rem;
+}
+.single-post-page .single-post h2.post-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.single-post-page .single-post article {
+  padding: 0px;
+}
+.single-post-page .single-post article ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+/***SINGLE POST PAGE END***/
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));

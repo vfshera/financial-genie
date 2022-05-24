@@ -20,7 +20,7 @@ class input extends Component
         $this->label = $label;
         $this->inputType = $type;
         $this->name = $name;
-        $this->placeholder = $placeholder == '' ? $placeholder : 'Enter ' . strtolower($label) . '...';
+        $this->placeholder = $placeholder == '' ? 'Enter ' . strtolower($label) . '...' : $placeholder;
     }
 
     /**

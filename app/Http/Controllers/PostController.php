@@ -19,8 +19,24 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $quill = new \DBlackborough\Quill\Render($request->quillcontent);
-        return $quill->render();
+
+        $postData = $request->validate([
+            'quillcontent' => 'required|string',
+            'title' => 'required|string',
+        ]);
+
+        $quill = new \DBlackborough\Quill\Render($postData['quillcontent']);
+        $html = '<article class="post">' . $quill->render() . '</article>';
+
+        $post = Post::create([
+            'title' => $postData['title'],
+            'author' => "Franklin Shera",
+            'richtext' => $postData['quillcontent'],
+            'content' => $html,
+        ]);
+
+        dd($post);
+        return view('posts.post', compact('post', 'title'));
     }
 
     /**

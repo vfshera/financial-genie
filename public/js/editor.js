@@ -14145,12 +14145,8 @@ var saveBtn = document.querySelector("#editorSave");
 var editorEl = document.querySelector("#editor");
 var form = document.querySelector("#quillForm");
 var toolbarOptions = [[{
-  size: ["small", false, "large", "huge"]
-}], // custom dropdown
-[{
   header: [1, 2, 3, 4, 5, 6, false]
-}], ["bold", "italic", "underline", "strike"], // toggled buttons
-["blockquote", "code-block"], [{
+}], ["bold", "italic", "underline", "strike"], ["blockquote", "code-block"], [{
   align: []
 }], [{
   list: "ordered"
@@ -14160,14 +14156,11 @@ var toolbarOptions = [[{
   script: "sub"
 }, {
   script: "super"
-}], // superscript/subscript
-[{
+}], [{
   color: []
 }, {
   background: []
-}], // dropdown with defaults from theme
-["clean"] // remove formatting button
-];
+}], ["clean"]];
 var quillEditor = new (quill__WEBPACK_IMPORTED_MODULE_0___default())(editorEl, {
   modules: {
     toolbar: toolbarOptions
