@@ -1,0 +1,16 @@
+/***GLOBALS***/
+
+.fg-container {
+    @apply px-3 md:px-5 lg:px-44;
+}
+
+body.financial-genie-site {
+    @apply bg-primary flex flex-col min-h-full;
+}
+
+/***APP ENTRY START***/
+
+main.financial-genie-content {
+    @apply pt-6 md:pt-10;
+}
+/***APP ENTRY END***/
