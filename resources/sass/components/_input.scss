@@ -1,0 +1,21 @@
+.hinted {
+    @apply flex flex-col my-2;
+
+    .hint {
+        @apply flex  items-center;
+        span.name {
+            @apply font-bold text-sm;
+        }
+
+        p.value {
+        }
+    }
+}
+.input-group {
+    @apply flex flex-col;
+    label {
+    }
+    input {
+        @apply p-1 rounded;
+    }
+}
