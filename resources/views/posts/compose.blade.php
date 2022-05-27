@@ -9,7 +9,7 @@
     <div class="compose-page">
         <div class="compose-header">
             <h1>{{ $pageTitle }}</h1>
-            <button id="editorSubmit" class="btn-submit-post">{{ $post ? 'Update' : 'Save' }}</button>
+            <button id="editorSubmit" class="btn-submit-post">{{ isset($post) ? 'Update' : 'Save' }}</button>
         </div>
 
 

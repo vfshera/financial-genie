@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -30,12 +31,12 @@ class PostController extends Controller
 
         $post = Post::create([
             'title' => $postData['title'],
-            'author' => "Franklin Shera",
+            'user_id' => Auth::user()->id,
             'richtext' => $postData['quillcontent'],
             'content' => $html,
         ]);
 
-        return redirect()->route('posts.myposts');
+        return redirect()->route('admin.posts.myposts');
     }
 
     public function myPosts()
@@ -54,7 +55,7 @@ class PostController extends Controller
         //
     }
 
-    public function update(UpdatePostRequest $request, Post $post)
+    public function update(Request $request, Post $post)
     {
         //
     }

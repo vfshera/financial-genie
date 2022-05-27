@@ -10,4 +10,13 @@ class Post extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    protected $casts = [
+        'published' => 'boolean',
+    ];
+
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 }

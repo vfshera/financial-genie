@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\PostResource;
 use App\Models\Post;
 use Carbon\Carbon;
 
@@ -65,12 +66,17 @@ class PagesController extends Controller
 
     public function singlePost()
     {
-        $post = Post::orderByDesc('created_at')->get()[0];
+        $posts = PostResource::collection(Post::orderByDesc('created_at')->get());
+
+        $post = $posts[random_int(0, (count($posts) - 1))];
+
         return view('single-post', compact('post'));
     }
     public function classRender()
     {
-        $post = Post::orderByDesc('created_at')->get()[0];
+        $posts = PostResource::collection(Post::orderByDesc('created_at')->get());
+
+        $post = $posts[random_int(0, (count($posts) - 1))];
 
         $quill = new \DBlackborough\Quill\Render($post->richtext);
         $html = '<article class="post">' . $quill->render() . '</article>';
