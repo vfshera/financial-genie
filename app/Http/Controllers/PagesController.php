@@ -65,7 +65,18 @@ class PagesController extends Controller
 
     public function singlePost()
     {
-        $post = Post::first();
+        $post = Post::orderByDesc('created_at')->get()[0];
+        return view('single-post', compact('post'));
+    }
+    public function classRender()
+    {
+        $post = Post::orderByDesc('created_at')->get()[0];
+
+        $quill = new \DBlackborough\Quill\Render($post->richtext);
+        $html = '<article class="post">' . $quill->render() . '</article>';
+
+        return $html;
+
         return view('single-post', compact('post'));
     }
 }

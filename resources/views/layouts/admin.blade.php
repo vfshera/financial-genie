@@ -38,7 +38,7 @@
                 <section class="links">
 
                     @php
-                        $postLinks = [['name' => 'Compose', 'path' => 'admin.posts.compose'], ['name' => 'My Posts', 'path' => 'admin.dashboard']];
+                        $postLinks = [['name' => 'Compose', 'path' => 'admin.posts.compose'], ['name' => 'My Posts', 'path' => 'admin.posts.myposts']];
                     @endphp
                     <x-admin.sidebar-link :active="request()->routeIs('admin.dashboard')" :link="route('admin.dashboard')">
                         Dashboard

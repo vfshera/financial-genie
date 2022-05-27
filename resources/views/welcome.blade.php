@@ -20,13 +20,7 @@
 
         </section>
 
-
-
-
-
-
         <x-genie-cards :feeds="$newsFeed" cardType="TOP_HALF_BIG" section="exchange" title="Exchange news" limit="6" />
-
         <x-genie-cards :feeds="$newsFeed" cardType="SMALL" section="prediction" title="Predictions" limit="8" />
         <x-genie-cards :feeds="$newsFeed" cardType="BIG" section="press-release" title="Press Release" limit="6" />
         <x-genie-cards :feeds="$newsFeed" cardType="SMALL" section="paid" title="Sponsored" limit="8" />

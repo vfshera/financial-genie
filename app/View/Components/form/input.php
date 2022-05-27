@@ -10,16 +10,18 @@ class input extends Component
     public $inputType;
     public $name;
     public $placeholder;
+    public $value;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($label = 'Input', $type = 'text', $name = '', $placeholder = '')
+    public function __construct($label = 'Input', $type = 'text', $name = '', $placeholder = '', $value = '')
     {
         $this->label = $label;
         $this->inputType = $type;
         $this->name = $name;
+        $this->value = $value;
         $this->placeholder = $placeholder == '' ? 'Enter ' . strtolower($label) . '...' : $placeholder;
     }
 

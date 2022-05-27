@@ -35,50 +35,30 @@ class PostController extends Controller
             'content' => $html,
         ]);
 
-        dd($post);
-        return view('posts.post', compact('post', 'title'));
+        return redirect()->route('posts.myposts');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Post $post)
+    public function myPosts()
     {
-        //
+        $posts = Post::orderByDesc('created_at')->get();
+        return view('posts.myposts', compact('posts'));
+    }
+    public function editPost(Post $post)
+    {
+
+        return view('posts.compose', compact('post'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Post $post)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatePostRequest  $request
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function update(UpdatePostRequest $request, Post $post)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Post $post)
     {
         //

@@ -14139,9 +14139,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var quill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! quill */ "./node_modules/quill/dist/quill.js");
 /* harmony import */ var quill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(quill__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var quill_dist_quill_snow_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! quill/dist/quill.snow.css */ "./node_modules/quill/dist/quill.snow.css");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 
-var saveBtn = document.querySelector("#editorSave");
+
+var submitBtn = document.querySelector("#editorSubmit");
 var editorEl = document.querySelector("#editor");
 var form = document.querySelector("#quillForm");
 var toolbarOptions = [[{
@@ -14176,10 +14178,22 @@ function setInput() {
 quillEditor.on("editor-change", function (eventName) {
   console.log(eventName);
 });
-saveBtn.addEventListener("click", function () {
+submitBtn.addEventListener("click", function () {
   setInput();
   form.submit();
 });
+
+var _document$querySelect = document.querySelector("#quillcontent"),
+    value = _document$querySelect.value;
+
+if (value.length > 2) {
+  console.log(value.length);
+  var content = JSON.parse(value);
+
+  if (_typeof(content) == "object") {
+    quillEditor.setContents(content);
+  }
+}
 })();
 
 /******/ })()

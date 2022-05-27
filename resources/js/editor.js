@@ -1,14 +1,14 @@
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
 
-const saveBtn = document.querySelector("#editorSave");
+const submitBtn = document.querySelector("#editorSubmit");
 const editorEl = document.querySelector("#editor");
 const form = document.querySelector("#quillForm");
 
 const toolbarOptions = [
     [{ header: [1, 2, 3, 4, 5, 6, false] }],
 
-    ["bold", "italic", "underline", "strike"], 
+    ["bold", "italic", "underline", "strike"],
     ["blockquote", "code-block"],
 
     [{ align: [] }],
@@ -16,9 +16,9 @@ const toolbarOptions = [
     [{ list: "ordered" }, { list: "bullet" }],
     [{ script: "sub" }, { script: "super" }],
 
-    [{ color: [] }, { background: [] }], 
+    [{ color: [] }, { background: [] }],
 
-    ["clean"], 
+    ["clean"],
 ];
 
 const quillEditor = new Quill(editorEl, {
@@ -37,7 +37,17 @@ quillEditor.on("editor-change", (eventName, ...args) => {
     console.log(eventName);
 });
 
-saveBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", () => {
     setInput();
     form.submit();
 });
+
+const { value } = document.querySelector("#quillcontent");
+
+if (value.length > 2) {
+    console.log(value.length);
+    const content = JSON.parse(value);
+    if (typeof content == "object") {
+        quillEditor.setContents(content);
+    }
+}

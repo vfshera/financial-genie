@@ -1,19 +1,53 @@
 /*** SINGLE POST PAGE ***/
 .single-post-page {
-    @apply bg-light py-5;
+    @apply bg-white py-6;
 
-    .single-post {
-        @apply bg-white p-7 rounded;
+    .single-post-image {
+        @apply w-full h-[400px] bg-gold;
+    }
+    .single-post-content {
+        @apply flex gap-8 py-4 bg-white px-3;
 
-        h2.post-title {
-            @apply text-2xl font-semibold;
+        section.sharing {
+            @apply w-[4%] flex flex-col gap-3 items-center;
+            p {
+                @apply font-semibold;
+            }
+
+            .sharables {
+                @apply flex flex-col gap-2;
+
+                span {
+                    @apply cursor-pointer rounded transition-all duration-300 ease-in-out hover:rounded-full  flex justify-center items-center w-8 h-8 text-xs;
+                }
+            }
         }
 
-        article {
-            @apply p-0;
-            ol {
-                @apply list-decimal list-inside;
-                li {
+        section.post {
+            @apply bg-white  rounded w-[96%];
+
+            h2.post-title {
+                @apply text-4xl font-bold text-gray-800;
+            }
+
+            article {
+                @apply py-3 text-gray-800;
+
+                ol,
+                ul {
+                    @apply p-3 my-3;
+                }
+                ol {
+                    @apply list-decimal list-inside bg-gold/10;
+                    li {
+                    }
+                }
+
+                ul {
+                    @apply bg-blue-500/10;
+
+                    li {
+                    }
                 }
             }
         }

@@ -1,0 +1,23 @@
+.my-posts-page {
+    @apply p-3 flex flex-col gap-5;
+
+    h1 {
+        @apply font-bold text-lg;
+    }
+
+    section.my-posts {
+        @apply grid grid-cols-5 gap-3;
+
+        .post {
+            @apply bg-gray-50 border border-transparent cursor-pointer hover:scale-105 transition-all duration-500  rounded shadow-sm flex flex-col hover:border-cool/20;
+
+            &-image {
+                @apply h-40 bg-pink-100;
+            }
+
+            p.post-title {
+                @apply p-2;
+            }
+        }
+    }
+}

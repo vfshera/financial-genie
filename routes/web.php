@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/post', [PagesController::class, 'singlePost']);
+Route::get('/classrender', [PagesController::class, 'classRender']);
 
 Route::middleware([
     'auth:sanctum',
@@ -21,6 +22,8 @@ Route::middleware([
 
         Route::post('/create', [PostController::class, 'store'])->name('create');
 
-        // Route::post('/post', [PostController::class, 'store'])->name('single-view');
+        Route::get('/myposts', [PostController::class, 'myPosts'])->name('myposts');
+
+        Route::get('/edit/{post}', [PostController::class, 'editPost'])->name('edit-post');
     });
 });
