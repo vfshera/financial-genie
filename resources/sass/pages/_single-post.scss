@@ -1,9 +1,13 @@
 /*** SINGLE POST PAGE ***/
 .single-post-page {
-    @apply bg-white py-6;
+    @apply bg-white py-7;
 
     .single-post-image {
-        @apply w-full h-[400px] bg-gold;
+        @apply w-full h-[400px] bg-gold rounded shadow-sm overflow-hidden;
+
+        img {
+            @apply min-w-full min-h-full;
+        }
     }
     .single-post-content {
         @apply flex gap-8 py-4 bg-white px-3;

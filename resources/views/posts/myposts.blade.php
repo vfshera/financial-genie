@@ -9,7 +9,7 @@
 
 
             @foreach ($posts as $post)
-                <a href="{{ route('admin.posts.edit-post', [$post]) }}">
+                <a href="{{ route('admin.posts.edit', [$post]) }}">
                     <div class="post">
                         <div class="post-image">
 

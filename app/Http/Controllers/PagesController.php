@@ -72,17 +72,5 @@ class PagesController extends Controller
 
         return view('single-post', compact('post'));
     }
-    public function classRender()
-    {
-        $posts = PostResource::collection(Post::orderByDesc('created_at')->get());
 
-        $post = $posts[random_int(0, (count($posts) - 1))];
-
-        $quill = new \DBlackborough\Quill\Render($post->richtext);
-        $html = '<article class="post">' . $quill->render() . '</article>';
-
-        return $html;
-
-        return view('single-post', compact('post'));
-    }
 }
