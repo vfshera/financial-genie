@@ -53,6 +53,15 @@
                     li {
                     }
                 }
+                blockquote {
+                    @apply relative border-l-4 border-cool py-2 px-3 bg-gray-50 my-1;
+                }
+                pre {
+                    @apply bg-primary;
+                    code {
+                        @apply text-gray-50;
+                    }
+                }
             }
         }
     }
