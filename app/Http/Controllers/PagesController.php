@@ -72,5 +72,16 @@ class PagesController extends Controller
 
         return view('single-post', compact('post'));
     }
+    public function render()
+    {
+        $json = '{"ops":[{"insert":"const quillEditor = new Quill(editorEl, {"},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"    modules: {"},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"        toolbar: toolbarOptions,"},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"    },"},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"    placeholder: \"Lets get started\","},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"    theme: \"snow\","},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"});"},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"\nahahahahhahaa"},{"attributes":{"blockquote":true},"insert":"\n"},{"insert":"\n"}]}';
+
+        $lexer = new \nadar\quill\Lexer($json);
+
+        $html = '<article class="post">' . $lexer->render() . '</article>';
+        $post = (object) ['title' => "Test title", 'content' => $html];
+
+        return view('single-post', compact('post'));
+    }
 
 }

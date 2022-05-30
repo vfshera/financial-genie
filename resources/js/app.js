@@ -1,5 +1,5 @@
 import "./bootstrap";
-// import "./editor";
+import "quill/dist/quill.snow.css";
 
 import Alpine from "alpinejs";
 

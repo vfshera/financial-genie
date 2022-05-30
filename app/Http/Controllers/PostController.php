@@ -21,8 +21,9 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
 
-        $quill = new \DBlackborough\Quill\Render($request->quillcontent);
-        $html = '<article class="post">' . $quill->render() . '</article>';
+        $lexer = new \nadar\quill\Lexer($request->quillcontent);
+
+        $html = '<article class="post">' . $lexer->render() . '</article>';
 
         Post::create([
             'title' => $request->title,
@@ -48,8 +49,9 @@ class PostController extends Controller
     public function update(PostRequest $request, Post $post)
     {
 
-        $quill = new \DBlackborough\Quill\Render($request->quillcontent);
-        $html = '<article class="post">' . $quill->render() . '</article>';
+        $lexer = new \nadar\quill\Lexer($request->quillcontent);
+
+        $html = '<article class="post">' . $lexer->render() . '</article>';
 
         $post->update([
             'title' => $request->title,

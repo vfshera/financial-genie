@@ -1,5 +1,4 @@
 import Quill from "quill";
-import "quill/dist/quill.snow.css";
 
 const submitBtn = document.querySelector("#editorSubmit");
 const editorEl = document.querySelector("#editor");
@@ -34,7 +33,7 @@ function setInput() {
 }
 
 quillEditor.on("editor-change", (eventName, ...args) => {
-    console.log(eventName);
+    console.log("CONTENTS : ", quillEditor.root);
 });
 
 submitBtn.addEventListener("click", () => {
@@ -45,7 +44,6 @@ submitBtn.addEventListener("click", () => {
 const { value } = document.querySelector("#quillcontent");
 
 if (value.length > 2) {
-    console.log(value.length);
     const content = JSON.parse(value);
     if (typeof content == "object") {
         quillEditor.setContents(content);

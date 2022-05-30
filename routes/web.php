@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/post', [PagesController::class, 'singlePost']);
+Route::get('/render', [PagesController::class, 'render']);
 
 Route::middleware([
     'auth:sanctum',
