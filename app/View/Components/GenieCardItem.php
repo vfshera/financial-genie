@@ -6,7 +6,7 @@ use Illuminate\View\Component;
 
 class GenieCardItem extends Component
 {
-    public $card;
+    public $post;
     public $enlarged;
     public $bigFirst;
     public $section;
@@ -19,9 +19,9 @@ class GenieCardItem extends Component
      *
      * @return void
      */
-    public function __construct($card, $enlarged = false, $type = 'SMALL', $section, $index = 10)
+    public function __construct($post, $enlarged = false, $type = 'SMALL', $section, $index = 10)
     {
-        $this->card = $card;
+        $this->post = $post;
         $this->section = $section;
         $this->enlarged = $enlarged;
         $this->bigFirst = $index == 0 && $section == 'feed';

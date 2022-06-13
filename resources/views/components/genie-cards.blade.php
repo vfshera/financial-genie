@@ -5,14 +5,14 @@
         <a href="#{{ $section }}">View All</a>
     </header>
     <section class=" {{ $section . '-cards' }} {{ $types[$cardType] . 's' }} ">
-        @foreach ($feeds as $key => $feed)
+        @foreach ($feeds as $key => $post)
             @php
                 $isEnlarged = $key < 2 && $cardType == 'TOP_HALF_BIG';
                 
             @endphp
 
             @if ($key < $limit)
-                <x-genie-card-item :card="$feed" :enlarged="$isEnlarged" :section="$section" :type="$cardType"
+                <x-genie-card-item :post="$post" :enlarged="$isEnlarged" :section="$section" :type="$cardType"
                     :index="$key" />
             @endif
         @endforeach

@@ -10,17 +10,13 @@ class PagesController extends Controller
 {
     public function index()
     {
-
         $newsFeed = PostResource::collection(Post::with('user')->orderByDesc('created_at')->get());
 
         return view('welcome', compact('newsFeed'));
     }
 
-    public function singlePost()
+    public function singlePost(Post $post)
     {
-        $posts = PostResource::collection(Post::orderByDesc('created_at')->get());
-
-        $post = $posts[random_int(0, (count($posts) - 1))];
 
         return view('single-post', compact('post'));
     }

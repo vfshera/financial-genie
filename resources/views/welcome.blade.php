@@ -13,7 +13,7 @@
                     @endphp
 
 
-                    <x-genie-card-item :big-first="$withBigFirst" :card="$feed" :enlarged="$isEnlarged" :section="$section"
+                    <x-genie-card-item :big-first="$withBigFirst" :post="$feed" :enlarged="$isEnlarged" :section="$section"
                         :type="$cardType" :index="$key" />
                 @endif
             @endforeach

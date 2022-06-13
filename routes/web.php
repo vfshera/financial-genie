@@ -5,8 +5,8 @@ use App\Http\Controllers\PostController;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [PagesController::class, 'index']);
-Route::get('/post', [PagesController::class, 'singlePost']);
+Route::get('/', [PagesController::class, 'index'])->name('welcome');
+Route::get('/post/{post}', [PagesController::class, 'singlePost'])->name('single-post');
 Route::get('/render', [PagesController::class, 'render']);
 
 Route::middleware([

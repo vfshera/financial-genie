@@ -47,11 +47,11 @@
 
                     <livewire:admin.sidebar-link-group title="Posts" :links="$postLinks" :openIf="request()->routeIs('admin.posts.*')" />
 
-                    <x-admin.sidebar-link>
+                    <x-admin.sidebar-link :active="request()->routeIs('welcome')" :link="route('welcome')">
                         <x-slot name="icon">
-                            00
+                            &phone;
                         </x-slot>
-                        Say Something
+                        Frontpage
                     </x-admin.sidebar-link>
 
 
