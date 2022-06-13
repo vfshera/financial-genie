@@ -877,21 +877,23 @@ main.financial-genie-content {
 }
 .single-post-page .single-post-content section.post article blockquote {
   position: relative;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   border-left-width: 4px;
   --tw-border-opacity: 1;
   border-color: rgb(1 174 244 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .single-post-page .single-post-content section.post article pre {
   --tw-bg-opacity: 1;
   background-color: rgb(19 23 34 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .single-post-page .single-post-content section.post article pre code {
   --tw-text-opacity: 1;

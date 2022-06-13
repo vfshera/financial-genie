@@ -5,8 +5,8 @@
     @endphp
 
     <x-slot name="pageTitle">
-        {{ $pageTitle }} </x-slot>
-
+        {{ $pageTitle }}
+    </x-slot>
     <div class="compose-page">
         <div class="compose-header">
             <h1>{{ $pageTitle }}</h1>
@@ -21,20 +21,21 @@
                     value=" {{ $post->richtext ?? '' }}" />
 
 
+
+
                 <div class="hinted">
                     @error('title')
                         <div class="text-red-500 bg-red-50 p-1 my-1">{{ $message }}</div>
                     @enderror
 
                     <x-form.input label="Title" type="text" placeholder="Enter title here..."
-                        value="{{ $post->title ?? '' }}" />
+                        value="{{ $post->title ?? '' }}" wire:model="title" />
 
 
-
-                    <x-form.hint name="slug" hint="the-title-slug-will-appear-here" />
 
                 </div>
 
+                {{-- <x-form.input label="Cover" type="file" placeholder="Upload Cover Photo..." /> --}}
 
                 @csrf
 
