@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\PostResource;
 use App\Models\Post;
 use nadar\quill\Lexer;
 
@@ -10,12 +9,13 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $newsFeed = PostResource::collection(Post::with('user')->orderByDesc('created_at')->get());
+
+        $newsFeed = Post::with(['user'])->orderByDesc('created_at')->get();
 
         return view('welcome', compact('newsFeed'));
     }
 
-    public function singlePost(Post $post)
+    public function singlePost(Post $post, $slug)
     {
 
         return view('single-post', compact('post'));

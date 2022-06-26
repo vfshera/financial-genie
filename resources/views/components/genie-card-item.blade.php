@@ -13,9 +13,11 @@
     </div>
 
     <div class="info">
-        <p class="title"><a href="{{ route('single-post', [$post]) }}">{{ $post->title }}</a></p>
+        <p class="title"><a
+                href="{{ route('single-post', ['post' => $post, 'slug' => $post->slug]) }}">{{ $post->title }}</a>
+        </p>
         <div class="info-group">
-            <p class="author"><span>By</span>{{ $post->author ?? 'unknown author' }}</p>
+            <p class="author"><span>By</span>{{ $post->user->name ?? 'unknown author' }}</p>
             <p class="posted">{{ $post->published ? $post->published_at : 'draft' }}</p>
         </div>
     </div>

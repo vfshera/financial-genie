@@ -9,26 +9,26 @@
             </div>
 
 
-            <div class="navigation" :class="{'mobile-nav': showMobile}">
+            <div class="navigation" :class="{ 'mobile-nav': showMobile }">
                 <ul>
                     <li>
                         <a href="/" @click="showMobile = false">Home</a>
                     </li>
                     <li>
-                        <a href="#news" @click="showMobile = false">News</a>
+                        <a href="/#news" @click="showMobile = false">News</a>
                     </li>
                     <li>
-                        <a href="#exchange" @click="showMobile = false">Exchange</a>
+                        <a href="/#exchange" @click="showMobile = false">Exchange</a>
                     </li>
                     <li>
-                        <a href="#prediction" @click="showMobile = false">Predictions</a>
+                        <a href="/#prediction" @click="showMobile = false">Predictions</a>
                     </li>
                     <li>
-                        <a href="#press-release" @click="showMobile = false">Press Release</a>
+                        <a href="/#press-release" @click="showMobile = false">Press Release</a>
                     </li>
 
                     <li>
-                        <a href="#learn" @click="showMobile = false">Learn</a>
+                        <a href="/#learn" @click="showMobile = false">Learn</a>
                     </li>
                     <li>
                         <a href="#" @click="showMobile = false">About</a>

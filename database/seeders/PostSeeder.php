@@ -56,6 +56,7 @@ class PostSeeder extends Seeder
 
             Post::create([
                 'title' => $this->titles[$key],
+                'slug' => $this->titles[$key],
                 'user_id' => 1,
                 'richtext' => $delta,
                 'content' => $html,

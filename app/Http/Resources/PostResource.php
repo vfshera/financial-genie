@@ -15,13 +15,14 @@ class PostResource extends JsonResource
     public function toArray($request)
     {
 
+        dd("class PostResource extends JsonResource");
         return [
             'id' => $this->id,
-            'title' => $this->title,
-            'author' => new AuthorResource($this->user),
-            'content' => $this->content,
-            'published' => $this->published,
-            'published_at' => $this->published_at,
+            // 'title' => $this->title,
+            // 'author' => new AuthorResource($this->user),
+            // 'content' => $this->content,
+            // 'published' => $this->published,
+            // 'published_at' => $this->published_at,
             'created_at' => $this->created_at,
         ];
 

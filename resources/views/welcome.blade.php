@@ -1,4 +1,6 @@
 <x-app-layout>
+
+
     <div class="welcome-page">
 
         <section class="news fg-container" id="news">

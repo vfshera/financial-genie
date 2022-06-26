@@ -6,7 +6,7 @@ use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PagesController::class, 'index'])->name('welcome');
-Route::get('/post/{post}', [PagesController::class, 'singlePost'])->name('single-post');
+Route::get('/post/{post}-{slug}', [PagesController::class, 'singlePost'])->name('single-post');
 Route::get('/render', [PagesController::class, 'render']);
 
 Route::middleware([
