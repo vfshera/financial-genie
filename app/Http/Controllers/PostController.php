@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Actions\Post\CreatePost;
+use App\Actions\Post\UpdatePost;
 use App\Http\Requests\PostRequest;
 use App\Models\Post;
 
@@ -43,16 +44,11 @@ class PostController extends Controller
     public function update(PostRequest $request, Post $post)
     {
 
-        $lexer = new \nadar\quill\Lexer($request->quillcontent);
+        /**
+         * Update Post Action
+         */
 
-        $html = '<article class="post">' . $lexer->render() . '</article>';
-
-        $post->update([
-            'title' => $request->title,
-            'slug' => $request->title,
-            'richtext' => $request->quillcontent,
-            'content' => $html,
-        ]);
+        (new UpdatePost())->update($post, $request->all());
 
         return redirect()->route('admin.posts.edit', [$post]);
     }
