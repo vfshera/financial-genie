@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\Post\CreatePost;
 use App\Http\Requests\PostRequest;
 use App\Models\Post;
-use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -21,24 +21,17 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
 
-        $lexer = new \nadar\quill\Lexer($request->quillcontent);
-
-        $html = '<article class="post">' . $lexer->render() . '</article>';
-
-        Post::create([
-            'title' => $request->title,
-            'slug' => $request->title,
-            'user_id' => Auth::user()->id,
-            'richtext' => $request->quillcontent,
-            'content' => $html,
-        ]);
+        /**
+         * Create Post Action
+         */
+        (new CreatePost())->create($request->all());
 
         return redirect()->route('admin.posts.myposts');
     }
 
     public function myPosts()
     {
-        $posts = Post::orderByDesc('created_at')->get();
+        $posts = Post::orderByDesc('created_at')->paginate(10);
         return view('posts.myposts', compact('posts'));
     }
     public function edit(Post $post)
@@ -56,6 +49,7 @@ class PostController extends Controller
 
         $post->update([
             'title' => $request->title,
+            'slug' => $request->title,
             'richtext' => $request->quillcontent,
             'content' => $html,
         ]);
