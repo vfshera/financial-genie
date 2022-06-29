@@ -22,9 +22,10 @@
 
     <div class="admin-dashboard">
 
+
         <header class="admin-head">
             <div class="admin-head-brand">
-                <span class="text-[#01aef4]">FG</span><span class="text-gray-500">Admin</span>
+                <span class="text-[#01aef4]">FG</span><span class="text-gray-50">Admin</span>
             </div>
 
             <div class="admin-head-nav">
@@ -32,6 +33,7 @@
             </div>
         </header>
         <section class="dashboard">
+            {{-- <livewire:admin.notification /> --}}
 
             <aside class="dashboard-sidebar">
 

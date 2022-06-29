@@ -36,6 +36,7 @@
                 </div>
 
 
+
                 @if (isset($post) && !$post->hasMedia('covers'))
                     @error('cover')
                         <div class="text-red-500 bg-red-50 p-1 my-1">{{ $message }}</div>

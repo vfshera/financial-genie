@@ -1,0 +1,6 @@
+.notification-wrapper {
+    @apply absolute z-50 top-10 bg-purple-600 w-full flex justify-center;
+    .notification {
+        @apply px-5 py-2;
+    }
+}

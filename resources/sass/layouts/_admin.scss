@@ -8,13 +8,13 @@
     @apply flex flex-col bg-[#f1f1f1];
 
     header.admin-head {
-        @apply flex items-center min-h-[var(--nav-height)] border-b border-secondary/10 bg-white;
+        @apply flex items-center min-h-[var(--nav-height)] border-b border-secondary/10 bg-primary;
 
         .admin-head-brand {
             @apply font-bold w-2/12 px-5;
         }
         .admin-head-nav {
-            @apply font-bold w-10/12 h-full bg-gold px-5;
+            @apply font-bold w-10/12 h-full  px-5 text-white;
         }
     }
 
