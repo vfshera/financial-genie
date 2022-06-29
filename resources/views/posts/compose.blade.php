@@ -16,7 +16,7 @@
         <div id="editor-wrapper">
             <form id="quillForm"
                 action="{{ isset($post) ? route('admin.posts.update', [$post]) : route('admin.posts.create') }}"
-                method="POST">
+                enctype="multipart/form-data" method="POST">
                 <input type="text" id="quillcontent" name="quillcontent" hidden
                     value=" {{ $post->richtext ?? '' }}" />
 
@@ -35,7 +35,15 @@
 
                 </div>
 
-                {{-- <x-form.input label="Cover" type="file" placeholder="Upload Cover Photo..." /> --}}
+                @if (isset($post->id))
+                    @error('cover')
+                        <div class="text-red-500 bg-red-50 p-1 my-1">{{ $message }}</div>
+                    @enderror
+
+                    <x-form.input label="Cover" type="file" name="cover" aria-required="true" accept="image/*"
+                        placeholder="Upload Cover Photo..." :noLabel="true" />
+                @endif
+
 
                 @csrf
 

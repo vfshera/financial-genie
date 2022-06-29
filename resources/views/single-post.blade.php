@@ -3,7 +3,7 @@
     <div class="single-post-page fg-container">
 
         <div class="single-post-image">
-            <img src="https://picsum.photos/900/600?random={{ random_int(1, 1000) }}" alt="{{ $post->slug }}">
+            <img src="{{ $post->getFirstMediaUrl('covers') }}" alt="{{ $post->slug }}">
         </div>
 
         <div class="single-post-content">
