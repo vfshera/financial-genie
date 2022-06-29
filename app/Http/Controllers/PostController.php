@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Actions\Post\CreatePost;
 use App\Actions\Post\UpdatePost;
-use App\Http\Requests\PostRequest;
+use App\Http\Requests\PostCreateRequest;
+use App\Http\Requests\PostUpdateRequest;
 use App\Models\Post;
 
 class PostController extends Controller
@@ -19,7 +20,7 @@ class PostController extends Controller
         return view('posts.compose');
     }
 
-    public function store(PostRequest $request)
+    public function store(PostCreateRequest $request)
     {
 
         /**
@@ -41,7 +42,7 @@ class PostController extends Controller
         return view('posts.compose', compact('post'));
     }
 
-    public function update(PostRequest $request, Post $post)
+    public function update(PostUpdateRequest $request, Post $post)
     {
 
         /**

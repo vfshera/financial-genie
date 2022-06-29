@@ -22,5 +22,15 @@ class UpdatePost
             'richtext' => $postData['quillcontent'],
             'content' => (new RenderQuillContent())->render($postData['quillcontent']),
         ]);
+
+        $coverImg = $postData['cover'];
+
+        $post->addMedia($coverImg)
+            ->sanitizingFileName(function ($fileName) {
+                return strtolower(str_replace(['#', '/', '\\', ' '], '-', $fileName));
+            })
+            ->withResponsiveImages()
+            ->toMediaCollection('covers');
+
     }
 }
