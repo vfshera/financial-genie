@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot name="postseo">
+        {!! seo($post ?? null) !!}
+    </x-slot>
 
     <div class="single-post-page fg-container">
 
