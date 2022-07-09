@@ -805,6 +805,17 @@ main.financial-genie-content {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
+.single-post-page .single-post-content section.post h6.post-read {
+  display: inline;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 174 244 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-style: italic;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 .single-post-page .single-post-content section.post article {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;

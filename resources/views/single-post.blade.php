@@ -3,6 +3,7 @@
         {!! seo($post ?? null) !!}
     </x-slot>
 
+
     <div class="single-post-page fg-container">
 
         <div class="single-post-image">
@@ -11,7 +12,9 @@
 
         <div class="single-post-content">
             <section class="sharing">
+
                 <p>Share</p>
+
 
 
                 <div class="sharables">
@@ -22,6 +25,7 @@
             </section>
             <section class="post">
                 <h2 class="post-title">{{ $post->title }}</h2>
+                <h6 class="post-read">{{ read_time(strip_tags($post->content)) }}</h6>
                 {!! $post->content !!}
             </section>
         </div>

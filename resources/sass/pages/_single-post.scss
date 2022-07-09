@@ -33,7 +33,9 @@
             h2.post-title {
                 @apply text-4xl font-bold text-gray-800;
             }
-
+            h6.post-read {
+                @apply inline px-2 italic rounded-full bg-cool text-white;
+            }
             article {
                 @apply py-3 text-gray-800;
 
