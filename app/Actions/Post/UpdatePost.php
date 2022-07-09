@@ -15,7 +15,6 @@ class UpdatePost
      */
     public function update(Post $post, array $postData)
     {
-
         $post->update([
             'title' => $postData['title'],
             'slug' => $postData['title'],
@@ -31,6 +30,5 @@ class UpdatePost
             })
             ->withResponsiveImages()
             ->toMediaCollection('covers');
-
     }
 }

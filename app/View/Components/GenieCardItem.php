@@ -7,11 +7,17 @@ use Illuminate\View\Component;
 class GenieCardItem extends Component
 {
     public $post;
+
     public $enlarged;
+
     public $bigFirst;
+
     public $section;
+
     public $types = ['SMALL' => 'small-card', 'BIG' => 'big-card', 'TOP_HALF_BIG' => 'half-big-card'];
+
     public $cardType;
+
     public $index;
 
     /**
@@ -19,7 +25,7 @@ class GenieCardItem extends Component
      *
      * @return void
      */
-    public function __construct($post, $enlarged = false, $type = 'SMALL', $section, $index = 10)
+    public function __construct($post, $enlarged, $type, $section, $index = 10)
     {
         $this->post = $post;
         $this->section = $section;

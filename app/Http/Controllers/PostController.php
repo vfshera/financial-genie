@@ -34,11 +34,12 @@ class PostController extends Controller
     public function myPosts()
     {
         $posts = Post::orderByDesc('created_at')->paginate(10);
+
         return view('posts.myposts', compact('posts'));
     }
+
     public function edit(Post $post)
     {
-
         return view('posts.compose', compact('post'));
     }
 
@@ -48,7 +49,6 @@ class PostController extends Controller
         /**
          * Update Post Action
          */
-
         (new UpdatePost())->update($post, $request->all());
 
         return redirect()->route('admin.posts.edit', [$post]);

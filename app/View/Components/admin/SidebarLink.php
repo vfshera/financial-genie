@@ -7,14 +7,17 @@ use Illuminate\View\Component;
 class SidebarLink extends Component
 {
     public $link;
+
     public $isNested;
+
     public $isActive;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($active = false, $nested = false, $link = "#")
+    public function __construct($active = false, $nested = false, $link = '#')
     {
         $this->isNested = $nested;
         $this->isActive = $active;

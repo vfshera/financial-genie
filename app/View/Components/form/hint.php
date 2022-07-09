@@ -7,13 +7,15 @@ use Illuminate\View\Component;
 class hint extends Component
 {
     public $name;
+
     public $hint;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name = "Hint", $hint = "this is a hint value")
+    public function __construct($name = 'Hint', $hint = 'this is a hint value')
     {
         $this->name = $name;
         $this->hint = $hint;

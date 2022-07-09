@@ -15,7 +15,6 @@ class CreatePost
      */
     public function create(array $postData)
     {
-
         Post::create([
             'title' => $postData['title'],
             'slug' => $postData['title'],

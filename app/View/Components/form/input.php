@@ -7,11 +7,17 @@ use Illuminate\View\Component;
 class input extends Component
 {
     public $noLabel;
+
     public $label;
+
     public $inputType;
+
     public $name;
+
     public $placeholder;
+
     public $value;
+
     /**
      * Create a new component instance.
      *
@@ -24,8 +30,7 @@ class input extends Component
         $this->inputType = $type;
         $this->name = $name;
         $this->value = $value;
-        $this->placeholder = $placeholder == '' ? 'Enter ' . strtolower($label) . '...' : $placeholder;
-
+        $this->placeholder = $placeholder == '' ? 'Enter '.strtolower($label).'...' : $placeholder;
     }
 
     /**
@@ -35,7 +40,6 @@ class input extends Component
      */
     public function render()
     {
-
         return view('components.form.input');
     }
 }

@@ -23,13 +23,14 @@ class Post extends Model implements HasMedia
     public function getDynamicSEOData(): SEOData
     {
         return new SEOData(
-            title:env('APP_NAME') . " - " . $this->title,
+            title:env('APP_NAME').' - '.$this->title,
             description:null,
             author:$this->user->name,
             image:$this->getFirstMediaUrl('covers'),
-            url:url('post/' . $this->slug)
+            url:url('post/'.$this->slug)
         );
     }
+
     public function setSlugAttribute($value)
     {
         $this->attributes['slug'] = Str::slug($value);
@@ -39,6 +40,7 @@ class Post extends Model implements HasMedia
     {
         $this->addMediaCollection('covers');
     }
+
     public function user()
     {
         return $this->hasOne(User::class, 'id', 'user_id');

@@ -7,10 +7,15 @@ use Illuminate\View\Component;
 class GenieCards extends Component
 {
     public $feeds;
+
     public $cardType;
+
     public $section;
+
     public $title;
+
     public $limit;
+
     public $types = ['SMALL' => 'small-card', 'BIG' => 'big-card', 'TOP_HALF_BIG' => 'half-big-card'];
 
     /**
@@ -18,14 +23,13 @@ class GenieCards extends Component
      *
      * @return void
      */
-    public function __construct($feeds = [], $cardType = "SMALL", $section = "", $title = "", $limit = 8)
+    public function __construct($feeds = [], $cardType = 'SMALL', $section = '', $title = '', $limit = 8)
     {
         $this->feeds = $feeds;
         $this->cardType = $cardType;
         $this->section = $section;
         $this->title = $title;
         $this->limit = $limit;
-
     }
 
     /**

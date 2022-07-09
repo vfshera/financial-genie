@@ -14,8 +14,8 @@ class PostResource extends JsonResource
      */
     public function toArray($request)
     {
+        dd('class PostResource extends JsonResource');
 
-        dd("class PostResource extends JsonResource");
         return [
             'id' => $this->id,
             // 'title' => $this->title,
@@ -25,6 +25,5 @@ class PostResource extends JsonResource
             // 'published_at' => $this->published_at,
             'created_at' => $this->created_at,
         ];
-
     }
 }

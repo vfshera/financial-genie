@@ -8,17 +8,18 @@ use Illuminate\Database\Seeder;
 class PostSeeder extends Seeder
 {
     public $titles = [
-        "Do you think people are born good singers or can someone learn to be a good singer?",
-        "How about you start and work on it gradually.",
-        "Want to run a business  in kenya?",
-        "Code Block Simple",
-        "Do you think the internet would survive without advertising?",
-        "How to make a wonderful website in minutes.",
-        "How to build Gmail-like UI with React Native [at a Zen temple Koshoji]",
-        "How to grow your web development career through freelancing.",
-        "Things to consider while planning for retirement",
-        "The last item in my shopping list",
+        'Do you think people are born good singers or can someone learn to be a good singer?',
+        'How about you start and work on it gradually.',
+        'Want to run a business  in kenya?',
+        'Code Block Simple',
+        'Do you think the internet would survive without advertising?',
+        'How to make a wonderful website in minutes.',
+        'How to build Gmail-like UI with React Native [at a Zen temple Koshoji]',
+        'How to grow your web development career through freelancing.',
+        'Things to consider while planning for retirement',
+        'The last item in my shopping list',
     ];
+
     public $deltas = [
         '{"ops":[{"insert":"\nKnow your speciality"},{"attributes":{"list":"ordered"},"insert":"\n"},{"insert":"Be an expert"},{"attributes":{"list":"ordered"},"insert":"\n"},{"insert":"Have projects"},{"attributes":{"list":"ordered"},"insert":"\n"},{"insert":"\n"},{"attributes":{"italic":true},"insert":"Because you are alive, everything is possible."},{"insert":" - "},{"attributes":{"bold":true},"insert":"Thich Nhat Hanh"},{"attributes":{"blockquote":true},"insert":"\n"},{"insert":"\n"}]}',
 
@@ -39,6 +40,7 @@ class PostSeeder extends Seeder
 
         '{"ops":[{"insert":" "},{"attributes":{"link":"https://www.youtube.com"},"insert":"00:00"},{"insert":" Intro "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:20"},{"insert":" Heading to Koshoji "},{"attributes":{"link":"https://www.youtube.com"},"insert":"06:56"},{"insert":" Create a new react native project "},{"attributes":{"link":"https://www.youtube.com"},"insert":"07:15"},{"insert":" Install dependencies "},{"attributes":{"link":"https://www.youtube.com"},"insert":"10:15"},{"insert":" Configure the project "},{"attributes":{"link":"https://www.youtube.com"},"insert":"17:45"},{"insert":" Integrate React Navigation "},{"attributes":{"link":"https://www.youtube.com"},"insert":"19:48"},{"insert":" Add main screen and sidebar "},{"attributes":{"link":"https://www.youtube.com"},"insert":"25:34"},{"insert":" Add types to navigator "},{"attributes":{"link":"https://www.youtube.com"},"insert":"26:51"},{"insert":" Add basic atoms and light theme "},{"attributes":{"link":"https://www.youtube.com"},"insert":"34:19"},{"insert":" Style the sidebar with the theme "},{"attributes":{"link":"https://www.youtube.com"},"insert":"35:57"},{"insert":" Make fixtures "},{"attributes":{"link":"https://www.youtube.com"},"insert":"39:38"},{"insert":" Container component "},{"attributes":{"link":"https://www.youtube.com"},"insert":"41:40"},{"insert":" Note list "},{"attributes":{"link":"https://www.youtube.com"},"insert":"47:15"},{"insert":" Header bar "},{"attributes":{"link":"https://www.youtube.com"},"insert":"53:24"},{"insert":" Add vector icons "},{"attributes":{"link":"https://www.youtube.com"},"insert":"58:26"},{"attributes":{"bold":true},"insert":" Touchable"},{"insert":" (Button) "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:07:55"},{"insert":" Add"},{"attributes":{"italic":true},"insert":" press handler to "},{"insert":"sidebar "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:09:39"},{"insert":" Prepare making header sticky "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:12:02"},{"insert":" Sticky header "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:19:22"},{"insert":" Implement snapping "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:21:14"},{"insert":" Status bar "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:24:20"},{"insert":" Swipeable View "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:33:34"},{"insert":" Note list swipe action "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:42:06"},{"insert":" Bottom sheet "},{"attributes":{"link":"https://www.youtube.com"},"insert":"01:54:28"},{"insert":" Notebook list "},{"attributes":{"link":"https://www.youtube.com"},"insert":"02:01:37"},{"insert":" Add Inkdrop logo "},{"attributes":{"link":"https://www.youtube.com"},"insert":"02:05:39"},{"insert":" Add notebook list to the bottom sheet "},{"attributes":{"link":"https://www.youtube.com"},"insert":"02:07:17"},{"insert":" Detail screen "},{"attributes":{"link":"https://www.youtube.com"},"insert":"02:10:29"},{"insert":" Dark theme "},{"attributes":{"link":"https://www.youtube.com"},"insert":"02:14:47"},{"insert":" Time-up! Let go home "},{"attributes":{"link":"https://www.youtube.com"},"insert":"02:15:15"},{"insert":" Fix a TS error in theme "},{"attributes":{"link":"https://www.youtube.com"},"insert":"02:15:36"},{"insert":" Theme picker "},{"attributes":{"link":"https://www.youtube.com"},"insert":"02:26:51"},{"insert":" "},{"attributes":{"strike":true},"insert":"More themes"},{"insert":" "},{"attributes":{"link":"https://www.youtube.com"},"insert":"02:29:24"},{"insert":" Thanks for watching\n"}]}',
     ];
+
     /**
      * Run the database seeds.
      *
@@ -47,10 +49,9 @@ class PostSeeder extends Seeder
     public function run()
     {
         foreach ($this->deltas as $key => $delta) {
-
             $lexer = new \nadar\quill\Lexer($delta);
 
-            $html = '<article class="post">' . $lexer->render() . '</article>';
+            $html = '<article class="post">'.$lexer->render().'</article>';
 
             echo "Key : {$key} \n";
 
