@@ -1,4 +1,4 @@
-<div class="navbar-wrapper" x-data="{ showMobile: false, showContact: false }">
+<div class="navbar-wrapper" x-data="{ showMobile: false, showContact: false, isSearching: false;results: [] }">
 
 
 
@@ -70,6 +70,20 @@
 
                 <button type="submit">Send</button>
             </form>
+        </div>
+    </div>
+
+
+    <div class="search-wrapper fixed right-0 top-20 bg-pink-500 z-[90] p-2 group ">
+        <div class="search cursor-pointer" @click="this.results.push({'name':'123'})">
+            &seArr; <span class="hidden group-hover:inline transition-all delay-100 ease-in-out">Search</span>
+        </div>
+    </div>
+
+
+    <div class="search-results-wrapper fixed top-0 left-0 z-[99] w-full  bg-gold  " x-show="results.length > 0">
+        <div class="search-results w-1/2">
+            RESULTS
         </div>
     </div>
 </div>

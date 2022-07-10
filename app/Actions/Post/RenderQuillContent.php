@@ -14,6 +14,6 @@ class RenderQuillContent
     {
         $lexer = new \nadar\quill\Lexer($quillJson);
 
-        return '<article class="post">' . $lexer->render() . '</article>';
+        return '<article class="post">'.$lexer->render().'</article>';
     }
 }

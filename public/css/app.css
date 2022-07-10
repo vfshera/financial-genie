@@ -2328,11 +2328,23 @@ select {
 .top-0 {
   top: 0px;
 }
+.top-5 {
+  top: 1.25rem;
+}
+.top-20 {
+  top: 5rem;
+}
 .z-0 {
   z-index: 0;
 }
 .z-50 {
   z-index: 50;
+}
+.z-\[99\] {
+  z-index: 99;
+}
+.z-\[90\] {
+  z-index: 90;
 }
 .col-span-6 {
   grid-column: span 6 / span 6;
@@ -2461,6 +2473,9 @@ select {
 }
 .h-20 {
   height: 5rem;
+}
+.max-h-96 {
+  max-height: 24rem;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -2783,6 +2798,14 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(254 242 242 / var(--tw-bg-opacity));
 }
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+.bg-gold {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 162 12 / var(--tw-bg-opacity));
+}
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -2807,6 +2830,9 @@ select {
 }
 .p-1 {
   padding: 0.25rem;
+}
+.p-10 {
+  padding: 2.5rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -3123,6 +3149,9 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.delay-100 {
+  transition-delay: 100ms;
+}
 .duration-150 {
   transition-duration: 150ms;
 }
@@ -3171,6 +3200,10 @@ select {
 .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+.hover\:px-10:hover {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
@@ -3317,6 +3350,9 @@ select {
 }
 .disabled\:opacity-25:disabled {
   opacity: 0.25;
+}
+.group:hover .group-hover\:inline {
+  display: inline;
 }
 @media (prefers-color-scheme: dark) {
 

@@ -31,7 +31,7 @@ class PagesController extends Controller
 
         $lexer = new Lexer($json);
 
-        $html = '<article class="post">' . $lexer->render() . '</article>';
+        $html = '<article class="post">'.$lexer->render().'</article>';
         $post = (object) ['title' => 'Test title', 'content' => $html];
 
         return view('single-post', compact('post'));

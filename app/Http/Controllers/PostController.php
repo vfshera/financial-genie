@@ -20,13 +20,12 @@ class PostController extends Controller
         return view('posts.compose');
     }
 
-    public function store(PostCreateRequest $request)
+    public function store(PostCreateRequest $request, CreatePost $createPost)
     {
-
         /**
          * Create Post Action
          */
-        (new CreatePost())->create($request->all());
+        $createPost->create($request->all());
 
         return redirect()->route('admin.posts.myposts');
     }
@@ -43,13 +42,12 @@ class PostController extends Controller
         return view('posts.compose', compact('post'));
     }
 
-    public function update(PostUpdateRequest $request, Post $post)
+    public function update(PostUpdateRequest $request, Post $post, UpdatePost $updatePost)
     {
-
         /**
          * Update Post Action
          */
-        (new UpdatePost())->update($post, $request->all());
+        $updatePost->update($post, $request->all());
 
         return redirect()->route('admin.posts.edit', [$post]);
     }
